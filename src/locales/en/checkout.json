@@ -1,0 +1,17 @@
+{
+  "title": "Checkout",
+  "shipping": {
+    "title": "Shipping Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "address": "Address",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "country": "Country"
+  },
+  "payment": {
+    "title": "Payment Method",
+    "placeholder": "Payment processing will be integrated here (e.g. Stripe)"
+  },
+  "confirm": "Confirm Order"
+}

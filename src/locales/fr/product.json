@@ -1,0 +1,30 @@
+{
+  "gallery": {
+    "alt": {
+      "main": "Vue principale du produit",
+      "aiTrackingDemo": "Démonstration du suivi IA",
+      "lifestyle": "Utilisation quotidienne",
+      "exploded": "Diagramme technique"
+    }
+  },
+  "features": {
+    "title": "Détails du Produit",
+    "f1": { "title": "Verrouillage Intelligent", "desc": "Un algorithme avancé vous garde centré." },
+    "f2": { "title": "Aluminium Aéronautique", "desc": "Léger et d'une résistance à toute épreuve." },
+    "f3": { "title": "Multi-mode", "desc": "Passez instantanément de poche à trépied." }
+  },
+  "specs": {
+    "title": "Spécifications Techniques",
+    "disclaimer": "Les mesures sont approximatives ; le produit réel peut varier légèrement.",
+    "model": "Modèle",
+    "material": "Matériau",
+    "color": "Couleur",
+    "foldingSize": "Taille Pliée",
+    "netWeight": "Poids Net",
+    "angle": "Plage d'Angle Contrôlable",
+    "charging": "Interface de Charge"
+  },
+  "related": {
+    "title": "Produits Connexes"
+  }
+}

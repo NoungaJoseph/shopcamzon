@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "title": "Capturez la vie.\nMains Libres.",
+    "subtitle": "Découvrez la nouvelle génération de suivi de visage intelligent. Fluide, portable et prêt pour votre prochaine aventure.",
+    "badges": ["Suivi Facial IA", "Suivi 360°", "Aucune App Requise"]
+  },
+  "advantages": {
+    "title": "Six Avantages Produit",
+    "description": "Conçu pour les créateurs exigeant la perfection dans chaque cadre.",
+    "items": [
+      {
+        "title": "Suivi Facial IA",
+        "desc": "L'objectif intelligent vous verrouille instantanément, vous gardant parfaitement dans le cadre."
+      },
+      {
+        "title": "Alliage Aérospatial",
+        "desc": "Construction en aluminium léger et durable, conçue pour durer."
+      },
+      {
+        "title": "Télécommande Bluetooth",
+        "desc": "Contrôlez vos prises de vue à distance avec le Bluetooth 5.2 à ultra-faible latence."
+      },
+      {
+        "title": "Prise en Main Stable",
+        "desc": "Technologie anti-tremblement garantissant une fluidité cinématique."
+      },
+      {
+        "title": "Panoramique 360°",
+        "desc": "Rotation illimitée pour capturer parfaitement chaque angle."
+      },
+      {
+        "title": "Monture Standard",
+        "desc": "Interface 1/4\" compatible avec appareils photo, anneaux lumineux et plus."
+      }
+    ]
+  },
+  "tech": {
+    "title": "Technologie Noire Révolutionnaire",
+    "signature": "Intelligent",
+    "quote": "L'avenir de la création de contenu solo est là.",
+    "captions": [
+      "Compact & Portable",
+      "Déploiement en un Clic",
+      "Contrôle Gestuel",
+      "Hub Bluetooth 5.2"
+    ]
+  },
+  "aiCloud": {
+    "title": "Puce de Suivi IA Nouvelle Génération",
+    "description": "Équipé d'un capteur IA dédié ne nécessitant aucune installation d'application. Allumez-le, et il vous suit fluidement avec une capacité de suivi à 360°. Idéal pour les vlogs, le streaming en direct et l'action intense."
+  },
+  "useCases": {
+    "travel": "Photographie de Voyage",
+    "group": "Selfies de Groupe",
+    "fitness": "Fitness & Sport",
+    "live": "Streaming en Direct"
+  },
+  "featured": {
+    "title": "Notre Collection",
+    "description": "Trouvez le compagnon intelligent parfait pour votre processus créatif."
+  },
+  "specs": {
+    "stat1": { "value": "1,8m", "label": "Extension Max" },
+    "stat2": { "value": "360°", "label": "Rotation Illimitée" },
+    "stat3": { "value": "BT 5.2", "label": "Connectivité Sans Fil" },
+    "stat4": { "value": "Type-C", "label": "Charge Rapide" }
+  },
+  "newsletter": {
+    "title": "Rejoignez la révolution",
+    "description": "Abonnez-vous pour un accès anticipé aux nouveautés et conseils pour créateurs.",
+    "placeholder": "Entrez votre e-mail",
+    "button": "S'abonner"
+  },
+  "videoShowcase": {
+    "title": "Découvrez-le en action",
+    "playButtonLabel": "Lire la vidéo"
+  },
+  "productDetails": {
+    "title": "Détails de conception",
+    "items": [
+      {
+        "num": "01",
+        "title": "Poignée en silicone",
+        "desc": "Le silicone ergonomique et antidérapant assure une prise en main confortable et sûre."
+      },
+      {
+        "num": "02",
+        "title": "Verrouillage sécurisé",
+        "desc": "Le mécanisme de verrouillage robuste maintient votre appareil parfaitement stable."
+      },
+      {
+        "num": "03",
+        "title": "Filetage standard",
+        "desc": "Support fileté universel 1/4\" pour une compatibilité maximale."
+      }
+    ]
+  },
+  "lifestyle": {
+    "title": "Fait pour chaque instant",
+    "description": "Des vlogs de voyage en solo aux aventures en groupe, ne manquez jamais une prise grâce au suivi intelligent qui vous accompagne à chaque mouvement."
+  },
+  "hero3d": {
+    "modelAltText": "Vue 3D interactive d'une perche à selfie et trépied",
+    "modelHint": "Glissez pour faire pivoter",
+    "modelCredit": "Modèle 3D par designdaco, via Sketchfab"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "socials": "Suivez-nous",
+  "contact": {
+    "title": "Contactez-nous",
+    "email": "olatransagency@gmail.com",
+    "phone": "+237 6 78 23 74 56"
+  },
+  "newsletter": {
+    "title": "Restez Connecté",
+    "placeholder": "Votre adresse e-mail",
+    "consent": "J'accepte la politique de confidentialité",
+    "button": "S'inscrire"
+  },
+  "copyright": "© {{year}} AeroTrack. Tous droits réservés."
+}

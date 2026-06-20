@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "title": "Capture Life.\nHands-Free.",
+    "subtitle": "Discover the next generation of intelligent face-tracking. Smooth, portable, and ready for your next adventure.",
+    "badges": ["AI Face Tracking", "360° Follow", "No App Needed"]
+  },
+  "advantages": {
+    "title": "Six Product Advantages",
+    "description": "Engineered for creators who demand perfection in every frame.",
+    "items": [
+      {
+        "title": "AI Face Tracking",
+        "desc": "Intelligent lens instantly locks onto you, keeping you perfectly in frame."
+      },
+      {
+        "title": "Aerospace Alloy",
+        "desc": "Lightweight, durable aluminum construction designed for the long haul."
+      },
+      {
+        "title": "Bluetooth Remote",
+        "desc": "Control your shots from a distance with ultra-low latency Bluetooth 5.2."
+      },
+      {
+        "title": "Steady Grip",
+        "desc": "Anti-shake black technology ensures cinematic smoothness."
+      },
+      {
+        "title": "360° Panoramic",
+        "desc": "Unlimited rotation to capture every angle flawlessly."
+      },
+      {
+        "title": "Standard Mount",
+        "desc": "1/4\" interface compatible with cameras, ring lights, and more."
+      }
+    ]
+  },
+  "tech": {
+    "title": "Breakthrough Black Technology",
+    "signature": "Intelligent",
+    "quote": "The future of solo content creation is here.",
+    "captions": [
+      "Compact & Portable",
+      "One-click Deployment",
+      "Hand-gesture Control",
+      "Bluetooth 5.2 Hub"
+    ]
+  },
+  "aiCloud": {
+    "title": "Next-Gen AI Tracking Chip",
+    "description": "Equipped with a dedicated AI sensor array that requires zero app installation. Just turn it on, and it follows you seamlessly with 360° tracking capability. Perfect for vlogs, live streaming, and high-motion action."
+  },
+  "useCases": {
+    "travel": "Travel Photography",
+    "group": "Group Selfies",
+    "fitness": "Fitness & Sports",
+    "live": "Live Streaming"
+  },
+  "featured": {
+    "title": "Our Collection",
+    "description": "Find the perfect intelligent companion for your creative workflow."
+  },
+  "specs": {
+    "stat1": { "value": "1.8m", "label": "Max Extension" },
+    "stat2": { "value": "360°", "label": "Unlimited Rotation" },
+    "stat3": { "value": "BT 5.2", "label": "Remote Connectivity" },
+    "stat4": { "value": "Type-C", "label": "Fast Charging" }
+  },
+  "newsletter": {
+    "title": "Join the Revolution",
+    "description": "Subscribe for early access to new releases and creator tips.",
+    "placeholder": "Enter your email",
+    "button": "Subscribe"
+  },
+  "videoShowcase": {
+    "title": "See It In Action",
+    "playButtonLabel": "Play Video"
+  },
+  "productDetails": {
+    "title": "Design Details",
+    "items": [
+      {
+        "num": "01",
+        "title": "Silicone Grip",
+        "desc": "Ergonomic, non-slip silicone ensures a comfortable and secure hold."
+      },
+      {
+        "num": "02",
+        "title": "Secure Head Lock",
+        "desc": "Heavy-duty locking mechanism keeps your device perfectly stable."
+      },
+      {
+        "num": "03",
+        "title": "Standard Thread",
+        "desc": "1/4\" universal thread mount for maximum compatibility."
+      }
+    ]
+  },
+  "lifestyle": {
+    "title": "Made for every moment",
+    "description": "From solo travel vlogs to group adventures, never miss a shot with intelligent tracking that follows your every move."
+  },
+  "hero3d": {
+    "modelAltText": "Interactive 3D view of a selfie stick and tripod",
+    "modelHint": "Drag to rotate",
+    "modelCredit": "3D model by designdaco, via Sketchfab"
+  }
+}

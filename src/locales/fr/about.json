@@ -1,0 +1,52 @@
+{
+  "title": "À Propos d'AeroTrack",
+  "story": {
+    "title": "L'Innovation",
+    "p1": "AeroTrack est né d'une idée simple : la création de contenu doit être mains libres, intuitive et sans limites. Nous avons entrepris de construire le compagnon intelligent ultime de 'technologie noire' pour les créateurs solos.",
+    "p2": "En intégrant une puce de suivi IA avancée directement dans le matériel, nous avons éliminé le besoin d'applications encombrantes ou de connexions Bluetooth complexes. Vous l'allumez, et il vous suit."
+  },
+  "mission": {
+    "title": "Notre Mission",
+    "text": "Donner aux créateurs le pouvoir de capturer les meilleurs moments de la vie avec une liberté inégalée et une fluidité cinématique."
+  },
+  "howItWorks": {
+    "title": "Comment Fonctionnent Nos Produits",
+    "intro": "Chaque produit AeroTrack est conçu pour être intuitif et totalement sans application. Voici comment exploiter le plein potentiel de chaque modèle :",
+    "product_1": {
+      "name": "AeroTrack Base",
+      "steps": [
+        "1. Allumez l'appareil et montez votre téléphone.",
+        "2. Placez-vous devant le capteur IA.",
+        "3. Faites le geste 'OK' avec la main pour lancer le suivi du visage.",
+        "4. Faites le geste de la 'Paume' pour mettre le suivi en pause."
+      ]
+    },
+    "product_5": {
+      "name": "AeroTrack Pro Studio",
+      "steps": [
+        "1. Fixez les deux lumières d'appoint sur les côtés du support.",
+        "2. Allumez les lumières et ajustez la luminosité et la température de couleur.",
+        "3. Montez votre téléphone et allumez le traqueur.",
+        "4. Utilisez les gestes manuels standard pour contrôler le suivi IA."
+      ]
+    },
+    "product_8": {
+      "name": "AeroTrack Remote Edition",
+      "steps": [
+        "1. Allumez l'appareil et connectez la télécommande Bluetooth à votre téléphone.",
+        "2. Utilisez la télécommande pour démarrer ou arrêter l'enregistrement vidéo à distance.",
+        "3. Prenez des photos instantanément sans toucher votre téléphone ni utiliser de minuteur.",
+        "4. Profitez d'un suivi IA fluide associé à un contrôle d'obturateur à distance."
+      ]
+    },
+    "product_9": {
+      "name": "AeroTrack Extendable Edition",
+      "steps": [
+        "1. Tirez la tige télescopique pour étendre le trépied à la hauteur souhaitée.",
+        "2. Ouvrez les pieds du trépied pour une base stable sur un terrain accidenté.",
+        "3. Montez votre appareil et activez le suivi IA avec le geste 'OK'.",
+        "4. Capturez des plans larges et des panoramas panoramiques les mains libres."
+      ]
+    }
+  }
+}

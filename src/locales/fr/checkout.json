@@ -1,0 +1,17 @@
+{
+  "title": "Caisse",
+  "shipping": {
+    "title": "Informations d'Expédition",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "address": "Adresse",
+    "city": "Ville",
+    "postalCode": "Code Postal",
+    "country": "Pays"
+  },
+  "payment": {
+    "title": "Méthode de Paiement",
+    "placeholder": "Le traitement du paiement sera intégré ici (ex: Stripe)"
+  },
+  "confirm": "Confirmer la Commande"
+}

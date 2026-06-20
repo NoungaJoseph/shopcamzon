@@ -1,0 +1,28 @@
+{
+  "title": "Shop AeroTrack",
+  "intro": "Explore our full range of intelligent AI-tracking gear. From compact handhelds to full studio setups.",
+  "filters": {
+    "all": "All Products",
+    "handheld": "Handheld",
+    "tripod": "Tripod",
+    "bundle": "Bundles"
+  },
+  "products": {
+    "product_1": {
+      "name": "AeroTrack Base",
+      "tagline": "Intelligent tracking, professional anti-shake."
+    },
+    "product_5": {
+      "name": "AeroTrack Pro Studio",
+      "tagline": "Includes dual magnetic fill lights for live delivery."
+    },
+    "product_8": {
+      "name": "AeroTrack Remote Edition",
+      "tagline": "Fast charge remote Bluetooth control for free shooting."
+    },
+    "product_9": {
+      "name": "AeroTrack Extendable",
+      "tagline": "1.8m wide angle stretch for outdoor shooting."
+    }
+  }
+}

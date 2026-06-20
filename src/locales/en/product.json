@@ -1,0 +1,30 @@
+{
+  "gallery": {
+    "alt": {
+      "main": "Product main view",
+      "aiTrackingDemo": "AI tracking demonstration",
+      "lifestyle": "Lifestyle usage",
+      "exploded": "Technical diagram"
+    }
+  },
+  "features": {
+    "title": "Product Details",
+    "f1": { "title": "Intelligent Lock", "desc": "Advanced algorithm keeps you centered." },
+    "f2": { "title": "Aviation Aluminum", "desc": "Lightweight and unyielding strength." },
+    "f3": { "title": "Multi-mode", "desc": "Switch between handheld and tripod instantly." }
+  },
+  "specs": {
+    "title": "Technical Specifications",
+    "disclaimer": "Measurements are approximate; actual product may vary slightly.",
+    "model": "Model",
+    "material": "Material",
+    "color": "Color",
+    "foldingSize": "Folding Size",
+    "netWeight": "Net Weight",
+    "angle": "Controllable Angle Range",
+    "charging": "Charging Interface"
+  },
+  "related": {
+    "title": "Related Products"
+  }
+}

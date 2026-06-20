@@ -1,0 +1,18 @@
+{
+  "title": "Your Cart",
+  "empty": "Your cart is currently empty.",
+  "continueShopping": "Continue Shopping",
+  "table": {
+    "product": "Product",
+    "quantity": "Quantity",
+    "total": "Total"
+  },
+  "summary": {
+    "title": "Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "shippingCalculated": "Calculated at checkout",
+    "total": "Total"
+  },
+  "checkout": "Proceed to Checkout"
+}

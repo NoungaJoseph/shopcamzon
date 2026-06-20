@@ -1,0 +1,28 @@
+{
+  "title": "Boutique AeroTrack",
+  "intro": "Explorez notre gamme complète d'équipements de suivi IA intelligent. Des modèles de poche compacts aux configurations de studio complètes.",
+  "filters": {
+    "all": "Tous les Produits",
+    "handheld": "Poche",
+    "tripod": "Trépied",
+    "bundle": "Packs"
+  },
+  "products": {
+    "product_1": {
+      "name": "AeroTrack Base",
+      "tagline": "Suivi intelligent, anti-tremblement professionnel."
+    },
+    "product_5": {
+      "name": "AeroTrack Pro Studio",
+      "tagline": "Comprend deux lumières d'appoint magnétiques pour le direct."
+    },
+    "product_8": {
+      "name": "AeroTrack Remote Edition",
+      "tagline": "Télécommande Bluetooth à charge rapide."
+    },
+    "product_9": {
+      "name": "AeroTrack Extendable",
+      "tagline": "Tige extensible de 1,8m pour prises de vue extérieures grand angle."
+    }
+  }
+}

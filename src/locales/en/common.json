@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "shopNow": "Shop Now",
+    "discoverRange": "Discover the Range",
+    "seeHowItWorks": "See How It Works",
+    "learnMore": "Learn More",
+    "viewDetails": "View Details",
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now"
+  },
+  "announcement": {
+    "message1": "Free shipping over 40,000 XAF",
+    "message2": "New: Dual fill light bundle now available"
+  },
+  "badges": {
+    "bestSeller": "Best Seller",
+    "new": "New",
+    "withFillLight": "With Fill Light"
+  }
+}

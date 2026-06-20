@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "about": "À Propos",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "shopNow": "Acheter",
+    "discoverRange": "Découvrir la gamme",
+    "seeHowItWorks": "Voir comment ça marche",
+    "learnMore": "En savoir plus",
+    "viewDetails": "Voir les détails",
+    "addToCart": "Ajouter au panier",
+    "buyNow": "Acheter maintenant"
+  },
+  "announcement": {
+    "message1": "Livraison gratuite à partir de 40,000 XAF",
+    "message2": "Nouveau : Pack double lumière d'appoint disponible"
+  },
+  "badges": {
+    "bestSeller": "Meilleure Vente",
+    "new": "Nouveau",
+    "withFillLight": "Avec Lumière d'Appoint"
+  }
+}

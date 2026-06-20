@@ -1,0 +1,18 @@
+{
+  "title": "Votre Panier",
+  "empty": "Votre panier est actuellement vide.",
+  "continueShopping": "Continuer vos achats",
+  "table": {
+    "product": "Produit",
+    "quantity": "Quantité",
+    "total": "Total"
+  },
+  "summary": {
+    "title": "Résumé de la Commande",
+    "subtotal": "Sous-total",
+    "shipping": "Expédition",
+    "shippingCalculated": "Calculé à l'étape suivante",
+    "total": "Total"
+  },
+  "checkout": "Passer à la Caisse"
+}
