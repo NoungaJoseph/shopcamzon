@@ -1,18 +1,25 @@
 {
-  "title": "Votre Panier",
+  "title": "Votre panier",
   "empty": "Votre panier est actuellement vide.",
   "continueShopping": "Continuer vos achats",
   "table": {
     "product": "Produit",
-    "quantity": "Quantité",
+    "quantity": "Quantite",
     "total": "Total"
   },
   "summary": {
-    "title": "Résumé de la Commande",
+    "title": "Resume de la commande",
     "subtotal": "Sous-total",
-    "shipping": "Expédition",
-    "shippingCalculated": "Calculé à l'étape suivante",
+    "shipping": "Livraison",
+    "shippingCalculated": "Calcule a l'etape suivante",
+    "free": "Gratuit",
     "total": "Total"
   },
-  "checkout": "Passer à la Caisse"
+  "remove": "Retirer",
+  "checkout": "Passer a la caisse",
+  "checkoutWhatsApp": "Commander via WhatsApp",
+  "whatsapp": {
+    "greeting": "Bonjour AeroTrack, je souhaite passer une commande :",
+    "nextStep": "Merci de m'indiquer comment proceder au paiement et a la livraison."
+  }
 }

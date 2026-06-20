@@ -44,7 +44,7 @@ export const ProductDetail: React.FC = () => {
           <p className="text-[var(--color-text-primary)] mb-8 leading-relaxed">
             {t(`shop:products.${id}.tagline`)}
             <br/><br/>
-            This premium AeroTrack edition brings cutting-edge AI face tracking, stable 360° rotation, and seamless gesture controls to your fingertips. Built with sturdy materials to support both smartphones and cameras, it's perfect for vloggers, live streamers, and content creators aiming for professional results.
+            {t('shop:detailDescription', "This premium AeroTrack edition brings cutting-edge AI face tracking, stable 360-degree rotation, and seamless gesture controls to your fingertips. Built with sturdy materials to support both smartphones and cameras, it's perfect for vloggers, live streamers, and content creators aiming for professional results.")}
           </p>
           
           <button 

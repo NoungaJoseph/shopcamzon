@@ -1,10 +1,11 @@
 {
   "title": "Boutique AeroTrack",
-  "intro": "Explorez notre gamme complète d'équipements de suivi IA intelligent. Des modèles de poche compacts aux configurations de studio complètes.",
+  "intro": "Explorez notre gamme complete d'equipements de suivi IA intelligent. Des modeles de poche compacts aux configurations de studio completes.",
+  "detailDescription": "Cette edition premium AeroTrack apporte le suivi de visage par IA, une rotation stable a 360 degres et des commandes gestuelles simples. Concue avec des materiaux solides pour supporter les smartphones et les cameras, elle est ideale pour les vloggers, les streamers et les createurs de contenu qui veulent un rendu professionnel.",
   "filters": {
-    "all": "Tous les Produits",
+    "all": "Tous les produits",
     "handheld": "Poche",
-    "tripod": "Trépied",
+    "tripod": "Trepied",
     "bundle": "Packs"
   },
   "products": {
@@ -14,15 +15,15 @@
     },
     "product_5": {
       "name": "AeroTrack Pro Studio",
-      "tagline": "Comprend deux lumières d'appoint magnétiques pour le direct."
+      "tagline": "Comprend deux lumieres d'appoint magnetiques pour le direct."
     },
     "product_8": {
       "name": "AeroTrack Remote Edition",
-      "tagline": "Télécommande Bluetooth à charge rapide."
+      "tagline": "Telecommande Bluetooth a charge rapide."
     },
     "product_9": {
       "name": "AeroTrack Extendable",
-      "tagline": "Tige extensible de 1,8m pour prises de vue extérieures grand angle."
+      "tagline": "Tige extensible de 1,8 m pour prises de vue exterieures grand angle."
     }
   }
 }

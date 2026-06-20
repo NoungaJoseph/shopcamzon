@@ -176,8 +176,7 @@ export const Home: React.FC = () => {
                   <div className="w-[280px] h-[400px] transition-transform flex items-end cursor-pointer relative overflow-hidden bg-[var(--color-bg-white)] shadow-sm group">
                     <img src={`/${item.img}.jpg`} alt="Product" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center gap-4 z-20">
+                    <div className="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center gap-4 z-20">
                       <Link to={`/product/${item.id}`} className="bg-white text-black px-6 py-2 uppercase font-bold text-xs tracking-wider hover:bg-gray-200 transition-colors">
                         {t('common:buttons.viewDetails', 'View Details')}
                       </Link>
@@ -192,7 +191,7 @@ export const Home: React.FC = () => {
                       </button>
                     </div>
 
-                    <span className="bg-white px-4 py-2 text-sm font-semibold z-10 uppercase tracking-wide translate-y-0 group-hover:translate-y-full transition-transform duration-300">
+                    <span className="bg-white px-4 py-2 text-sm font-semibold z-10 uppercase tracking-wide translate-y-full md:translate-y-0 md:group-hover:translate-y-full transition-transform duration-300">
                       {t(`shop:products.${item.id}.name`)}
                     </span>
                   </div>

@@ -3,6 +3,7 @@
     "home": "Home",
     "shop": "Shop",
     "about": "About",
+    "whereToBuy": "Where to Buy",
     "contact": "Contact"
   },
   "buttons": {
@@ -22,5 +23,8 @@
     "bestSeller": "Best Seller",
     "new": "New",
     "withFillLight": "With Fill Light"
+  },
+  "cart": {
+    "added": "Product added to cart"
   }
 }

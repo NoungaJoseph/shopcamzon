@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useContext, useState } from 'react';
 import type { ReactNode } from 'react';
 
@@ -14,6 +15,8 @@ interface CartContextType {
   addToCart: (item: Omit<CartItem, 'quantity'>, quantity?: number) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
+  lastAddedItem: CartItem | null;
+  clearLastAddedItem: () => void;
   cartTotal: number;
   itemCount: number;
 }
@@ -22,8 +25,10 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [items, setItems] = useState<CartItem[]>([]);
+  const [lastAddedItem, setLastAddedItem] = useState<CartItem | null>(null);
 
   const addToCart = (item: Omit<CartItem, 'quantity'>, quantity = 1) => {
+    setLastAddedItem({ ...item, quantity });
     setItems((prev) => {
       const existing = prev.find((i) => i.id === item.id);
       if (existing) {
@@ -33,6 +38,10 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       }
       return [...prev, { ...item, quantity }];
     });
+  };
+
+  const clearLastAddedItem = () => {
+    setLastAddedItem(null);
   };
 
   const removeFromCart = (id: string) => {
@@ -50,7 +59,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <CartContext.Provider value={{ items, addToCart, removeFromCart, updateQuantity, cartTotal, itemCount }}>
+    <CartContext.Provider value={{ items, addToCart, removeFromCart, updateQuantity, lastAddedItem, clearLastAddedItem, cartTotal, itemCount }}>
       {children}
     </CartContext.Provider>
   );
