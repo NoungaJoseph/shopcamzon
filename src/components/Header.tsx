@@ -17,8 +17,8 @@ export const Header: React.FC = () => {
 
   const currentLanguage = i18n.resolvedLanguage || i18n.language || 'en';
   const languageOptions = [
-    { code: 'en', label: 'English' },
-    { code: 'fr', label: 'Francais' }
+    { code: 'en', label: 'EN' },
+    { code: 'fr', label: 'FR' }
   ];
 
   const navLinks = [
@@ -47,7 +47,7 @@ export const Header: React.FC = () => {
             
             {/* The user provided logo1.png, replacing the text mark */}
             <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center">
-              <img src="/logo1.png" alt="AeroTrack" className="h-16 scale-150 transform origin-left w-auto object-contain" />
+              <img src="/logo1.png" alt="SHOPCAMZON" className="h-16 scale-150 transform origin-left w-auto object-contain" />
             </Link>
           </div>
 
@@ -74,7 +74,7 @@ export const Header: React.FC = () => {
               <select
                 value={currentLanguage.startsWith('fr') ? 'fr' : 'en'}
                 onChange={(event) => changeLanguage(event.target.value)}
-                className="h-10 appearance-none border border-[var(--color-black)] bg-white pl-3 pr-9 text-xs font-bold uppercase tracking-wider text-[#1A1A1A] outline-none transition-colors hover:bg-gray-50"
+                className="h-8 w-[64px] appearance-none border border-[var(--color-black)] bg-white pl-2 pr-5 text-xs font-bold uppercase tracking-wider text-[#1A1A1A] outline-none transition-colors hover:bg-gray-50"
               >
                 {languageOptions.map((option) => (
                   <option key={option.code} value={option.code}>

@@ -1,15 +1,19 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from './Button';
 import { Phone, Mail } from 'lucide-react';
 
 
 export const Footer: React.FC = () => {
+  const { t } = useTranslation(['footer']);
+
   return (
     <footer className="bg-white pt-24 pb-8">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
         
         {/* Column 1 */}
         <div className="flex flex-col">
-          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-[var(--color-text-primary)]">Follow us on:</h4>
+          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-[var(--color-text-primary)]">{t('footer:socials')}</h4>
           <div className="flex space-x-4 mt-6">
             <a href="#" className="hover:opacity-75 transition-colors" aria-label="Instagram">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stopColor="#f09433"/><stop offset="25%" stopColor="#e6683c"/><stop offset="50%" stopColor="#dc2743"/><stop offset="75%" stopColor="#cc2366"/><stop offset="100%" stopColor="#bc1888"/></linearGradient></defs><path fill="url(#ig)" d="M12,2.16c3.2,0,3.58,0,4.85,0.07c3.25,0.15,4.77,1.69,4.92,4.92c0.06,1.27,0.07,1.65,0.07,4.85s0,3.58-0.07,4.85c-0.15,3.23-1.66,4.77-4.92,4.92c-1.27,0.06-1.64,0.07-4.85,0.07s-3.58,0-4.85-0.07c-3.26-0.15-4.77-1.7-4.92-4.92C2.17,15.58,2.16,15.2,2.16,12s0-3.58,0.07-4.85C2.38,3.93,3.89,2.38,7.15,2.23C8.42,2.17,8.8,2.16,12,2.16z M12,7.16A4.84,4.84,0,1,0,16.84,12,4.84,4.84,0,0,0,12,7.16Zm0,7.91A3.07,3.07,0,1,1,15.07,12,3.07,3.07,0,0,1,12,15.07Zm3.8-8.21a1.18,1.18,0,1,1-1.18-1.18A1.18,1.18,0,0,1,15.8,6.86Z"/></svg>
@@ -22,30 +26,30 @@ export const Footer: React.FC = () => {
             </a>
           </div>
           <div className="mt-8">
-            <img src="/logo1.png" alt="AeroTrack Logo" className="h-32 w-auto object-contain" />
+            <img src="/logo1.png" alt="SHOPCAMZON Logo" className="h-32 w-auto object-contain" />
           </div>
         </div>
         
         {/* Column 2 */}
         <div className="flex flex-col">
-          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-[var(--color-text-primary)]">Subscribe to our newsletter</h4>
+          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-[var(--color-text-primary)]">{t('footer:newsletter.title')}</h4>
           <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
             <input 
               type="email" 
-              placeholder="Enter your email" 
+              placeholder={t('footer:newsletter.placeholder')}
               className="border border-[var(--color-black)] px-4 py-3 rounded-none focus:outline-none focus:ring-1 focus:ring-[var(--color-black)]"
             />
             <label className="flex items-center space-x-3 text-sm text-[var(--color-text-muted)] cursor-pointer">
               <input type="checkbox" className="accent-[var(--color-black)] w-4 h-4 rounded-none cursor-pointer" />
-              <span>Yes, subscribe me to your newsletter</span>
+              <span>{t('footer:newsletter.consent')}</span>
             </label>
-            <Button variant="solid" className="mt-2 w-fit text-xs">Subscribe Now</Button>
+            <Button variant="solid" className="mt-2 w-fit text-xs">{t('footer:newsletter.button')}</Button>
           </form>
         </div>
         
         {/* Column 3 */}
         <div className="flex flex-col">
-          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-[var(--color-text-primary)]">Contact Us:</h4>
+          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-[var(--color-text-primary)]">{t('footer:contact.title')}</h4>
           <div className="text-[var(--color-text-muted)] font-body flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <a href="tel:+237678237456" className="hover:text-[var(--color-accent)] transition-colors" aria-label="Call">
@@ -72,7 +76,7 @@ export const Footer: React.FC = () => {
       </div>
       
       <div className="max-w-7xl mx-auto px-6 pt-12 text-center text-[var(--color-text-muted)] text-sm">
-        <p>&copy; {new Date().getFullYear()} by AeroTrack. Powered and secured by Antigravity</p>
+        <p>{t('footer:copyright', { year: new Date().getFullYear() })}</p>
       </div>
     </footer>
   );

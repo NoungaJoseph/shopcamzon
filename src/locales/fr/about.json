@@ -1,8 +1,8 @@
 {
-  "title": "À Propos d'AeroTrack",
+  "title": "À Propos d'SHOPCAMZON",
   "story": {
     "title": "L'Innovation",
-    "p1": "AeroTrack est né d'une idée simple : la création de contenu doit être mains libres, intuitive et sans limites. Nous avons entrepris de construire le compagnon intelligent ultime de 'technologie noire' pour les créateurs solos.",
+    "p1": "SHOPCAMZON est né d'une idée simple : la création de contenu doit être mains libres, intuitive et sans limites. Nous avons entrepris de construire le compagnon intelligent ultime de 'technologie noire' pour les créateurs solos.",
     "p2": "En intégrant une puce de suivi IA avancée directement dans le matériel, nous avons éliminé le besoin d'applications encombrantes ou de connexions Bluetooth complexes. Vous l'allumez, et il vous suit."
   },
   "mission": {
@@ -11,9 +11,9 @@
   },
   "howItWorks": {
     "title": "Comment Fonctionnent Nos Produits",
-    "intro": "Chaque produit AeroTrack est conçu pour être intuitif et totalement sans application. Voici comment exploiter le plein potentiel de chaque modèle :",
+    "intro": "Chaque produit SHOPCAMZON est conçu pour être intuitif et totalement sans application. Voici comment exploiter le plein potentiel de chaque modèle :",
     "product_1": {
-      "name": "AeroTrack Base",
+      "name": "SHOPCAMZON Base",
       "steps": [
         "1. Allumez l'appareil et montez votre téléphone.",
         "2. Placez-vous devant le capteur IA.",
@@ -22,7 +22,7 @@
       ]
     },
     "product_5": {
-      "name": "AeroTrack Pro Studio",
+      "name": "SHOPCAMZON Pro Studio",
       "steps": [
         "1. Fixez les deux lumières d'appoint sur les côtés du support.",
         "2. Allumez les lumières et ajustez la luminosité et la température de couleur.",
@@ -31,7 +31,7 @@
       ]
     },
     "product_8": {
-      "name": "AeroTrack Remote Edition",
+      "name": "SHOPCAMZON Remote Edition",
       "steps": [
         "1. Allumez l'appareil et connectez la télécommande Bluetooth à votre téléphone.",
         "2. Utilisez la télécommande pour démarrer ou arrêter l'enregistrement vidéo à distance.",
@@ -40,7 +40,7 @@
       ]
     },
     "product_9": {
-      "name": "AeroTrack Extendable Edition",
+      "name": "SHOPCAMZON Extendable Edition",
       "steps": [
         "1. Tirez la tige télescopique pour étendre le trépied à la hauteur souhaitée.",
         "2. Ouvrez les pieds du trépied pour une base stable sur un terrain accidenté.",

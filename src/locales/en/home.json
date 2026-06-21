@@ -53,7 +53,8 @@
     "travel": "Travel Photography",
     "group": "Group Selfies",
     "fitness": "Fitness & Sports",
-    "live": "Live Streaming"
+    "live": "Live Streaming",
+    "vlogging": "Ideal for vlogging and content creation on the go."
   },
   "featured": {
     "title": "Our Collection",
@@ -103,5 +104,31 @@
     "modelAltText": "Interactive 3D view of a selfie stick and tripod",
     "modelHint": "Drag to rotate",
     "modelCredit": "3D model by designdaco, via Sketchfab"
+  },
+  "q04": {
+    "title": "Packed With Technology",
+    "subtitle": "Every feature engineered for the modern content creator.",
+    "features": {
+      "bluetooth": "Bluetooth Remote Control",
+      "bluetoothDesc": "Control your shots from a distance with the included Bluetooth remote.",
+      "rotation": "360° Rotation Follow-up",
+      "rotationDesc": "Seamless full-circle AI face tracking keeps you in frame at all times.",
+      "charging": "TYPE-C Fast Charging",
+      "chargingDesc": "7 hours of battery life with modern Type-C fast charging support.",
+      "noApp": "No App Required",
+      "noAppDesc": "Works straight out of the box — zero downloads, zero setup needed."
+    }
+  },
+  "remoteGuide": {
+    "title": "Master Your Remote",
+    "subtitle": "Every button on your Bluetooth remote has a purpose. Here is what each one does."
+  },
+  "gestureGuide": {
+    "title": "AI Gesture Control",
+    "subtitle": "Your hands are the controller. Use simple gestures to start tracking, take photos, or pause.",
+    "ok": "👌 OK Gesture",
+    "okDesc": "Show the OK hand sign to the camera and the tracker will begin following you within 1 second.",
+    "palm": "🤚 Palm Gesture",
+    "palmDesc": "Hold your open palm up to the camera. Within 3 seconds, tracking will pause and the device will hold its position."
   }
 }

@@ -6,6 +6,17 @@
     "whereToBuy": "Ou acheter",
     "contact": "Contact"
   },
+  "whereToBuy": {
+    "subtitle": "Trouvez SHOPCAMZON dans un magasin près de chez vous ou commandez en ligne."
+  },
+  "cities": {
+    "douala": "Douala",
+    "bamenda": "Bamenda",
+    "yaounde": "Yaoundé",
+    "buea": "Buéa",
+    "limbe": "Limbé",
+    "bafoussam": "Bafoussam"
+  },
   "buttons": {
     "shopNow": "Acheter",
     "discoverRange": "Decouvrir la gamme",

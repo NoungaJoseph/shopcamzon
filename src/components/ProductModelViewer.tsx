@@ -20,24 +20,6 @@ interface ProductModelViewerProps {
 export const ProductModelViewer: React.FC<ProductModelViewerProps> = ({ className }) => {
   const { t } = useTranslation(['home']);
 
-  // Check prefers-reduced-motion — if enabled, show static fallback instead
-  const prefersReducedMotion = typeof window !== 'undefined' 
-    ? window.matchMedia('(prefers-reduced-motion: reduce)').matches 
-    : false;
-
-  if (prefersReducedMotion) {
-    // Static fallback for users who prefer reduced motion
-    return (
-      <div className={className}>
-        <img 
-          src="/1.jpg" 
-          alt={t('home:hero3d.modelAltText', 'Interactive 3D view of a selfie stick and tripod')} 
-          className="w-full h-full object-cover"
-        />
-      </div>
-    );
-  }
-
   return (
     <div className={`relative overflow-hidden ${className || ''}`}>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

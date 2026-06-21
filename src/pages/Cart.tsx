@@ -10,13 +10,13 @@ export const Cart: React.FC = () => {
   const { items, removeFromCart, updateQuantity, cartTotal } = useCart();
 
   const handleCheckout = () => {
-    let message = `${t('cart:whatsapp.greeting', 'Hello AeroTrack, I would like to place an order:')}\n\n`;
+    let message = `${t('cart:whatsapp.greeting', 'Hello Shopcamzon, I would like to place an order:')}\n\n`;
     items.forEach(item => {
       const productName = t(`shop:products.${item.id}.name`, item.name);
       message += `- ${item.quantity}x ${productName} (${(item.price * item.quantity).toLocaleString()} XAF)\n`;
     });
     message += `\n*${t('cart:summary.total', 'Total')}: ${cartTotal.toLocaleString()} XAF*\n\n${t('cart:whatsapp.nextStep', 'Please let me know how to proceed with payment and delivery.')}`;
-    
+
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/237678237456?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
@@ -48,7 +48,7 @@ export const Cart: React.FC = () => {
                   <div className="flex-1">
                     <h3 className="font-bold uppercase tracking-wider mb-2">{t(`shop:products.${item.id}.name`, item.name)}</h3>
                     <span className="text-[var(--color-text-muted)]">{item.price.toLocaleString()} XAF</span>
-                    
+
                     <div className="flex items-center gap-4 mt-4">
                       <div className="flex items-center border border-gray-200">
                         <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="px-3 py-1 hover:bg-gray-50">-</button>
@@ -64,7 +64,7 @@ export const Cart: React.FC = () => {
                 </Reveal>
               ))}
             </div>
-            
+
             <Reveal className="bg-[var(--color-bg-cream)] p-8 h-fit">
               <h2 className="text-xl font-headline uppercase tracking-widest mb-6">{t('cart:summary.title', 'Order Summary')}</h2>
               <div className="flex justify-between mb-4 text-[var(--color-text-muted)]">
@@ -80,7 +80,7 @@ export const Cart: React.FC = () => {
                 <span>{t('cart:summary.total', 'Total')}</span>
                 <span>{cartTotal.toLocaleString()} XAF</span>
               </div>
-              <button 
+              <button
                 onClick={handleCheckout}
                 className="bg-[var(--color-black)] text-white py-4 px-8 uppercase font-bold tracking-widest hover:bg-[var(--color-accent)] transition-colors w-full"
               >

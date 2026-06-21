@@ -53,7 +53,8 @@
     "travel": "Photographie de Voyage",
     "group": "Selfies de Groupe",
     "fitness": "Fitness & Sport",
-    "live": "Streaming en Direct"
+    "live": "Streaming en Direct",
+    "vlogging": "Idéal pour le vlogging et la création de contenu en déplacement."
   },
   "featured": {
     "title": "Notre Collection",
@@ -103,5 +104,31 @@
     "modelAltText": "Vue 3D interactive d'une perche à selfie et trépied",
     "modelHint": "Glissez pour faire pivoter",
     "modelCredit": "Modèle 3D par designdaco, via Sketchfab"
+  },
+  "q04": {
+    "title": "Bourré de technologie",
+    "subtitle": "Chaque fonctionnalité conçue pour le créateur de contenu moderne.",
+    "features": {
+      "bluetooth": "Télécommande Bluetooth",
+      "bluetoothDesc": "Contrôlez vos prises de vue à distance avec la télécommande Bluetooth incluse.",
+      "rotation": "Suivi par rotation à 360°",
+      "rotationDesc": "Le suivi facial AI circulaire complet vous maintient toujours dans le cadre.",
+      "charging": "Charge rapide TYPE-C",
+      "chargingDesc": "7 heures d'autonomie avec le support de charge rapide moderne de type C.",
+      "noApp": "Aucune application requise",
+      "noAppDesc": "Fonctionne dès la sortie de la boîte — aucun téléchargement, aucune configuration requise."
+    }
+  },
+  "remoteGuide": {
+    "title": "Maîtrisez votre télécommande",
+    "subtitle": "Chaque bouton de votre télécommande Bluetooth a un but. Voici ce que fait chacun d'eux."
+  },
+  "gestureGuide": {
+    "title": "Contrôle gestuel AI",
+    "subtitle": "Vos mains sont le contrôleur. Utilisez des gestes simples pour démarrer le suivi, prendre des photos ou mettre en pause.",
+    "ok": "👌 Geste OK",
+    "okDesc": "Faites le signe OK avec votre main à la caméra et le traqueur commencera à vous suivre dans un délai de 1 seconde.",
+    "palm": "🤚 Geste de la paume",
+    "palmDesc": "Levez votre paume ouverte vers la caméra. Dans les 3 secondes, le suivi se mettra en pause et l'appareil maintiendra sa position."
   }
 }

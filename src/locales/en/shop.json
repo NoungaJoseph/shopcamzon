@@ -1,7 +1,7 @@
 {
-  "title": "Shop AeroTrack",
+  "title": "Shop SHOPCAMZON",
   "intro": "Explore our full range of intelligent AI-tracking gear. From compact handhelds to full studio setups.",
-  "detailDescription": "This premium AeroTrack edition brings cutting-edge AI face tracking, stable 360-degree rotation, and seamless gesture controls to your fingertips. Built with sturdy materials to support both smartphones and cameras, it's perfect for vloggers, live streamers, and content creators aiming for professional results.",
+  "detailDescription": "This premium SHOPCAMZON edition brings cutting-edge AI face tracking, stable 360-degree rotation, and seamless gesture controls to your fingertips. Built with sturdy materials to support both smartphones and cameras, it's perfect for vloggers, live streamers, and content creators aiming for professional results.",
   "filters": {
     "all": "All Products",
     "handheld": "Handheld",
@@ -10,20 +10,36 @@
   },
   "products": {
     "product_1": {
-      "name": "AeroTrack Base",
+      "name": "SHOPCAMZON Base",
       "tagline": "Intelligent tracking, professional anti-shake."
     },
     "product_5": {
-      "name": "AeroTrack Pro Studio",
+      "name": "SHOPCAMZON Pro Studio",
       "tagline": "Includes dual magnetic fill lights for live delivery."
     },
     "product_8": {
-      "name": "AeroTrack Remote Edition",
+      "name": "SHOPCAMZON Remote Edition",
       "tagline": "Fast charge remote Bluetooth control for free shooting."
     },
     "product_9": {
-      "name": "AeroTrack Extendable",
-      "tagline": "1.8m wide angle stretch for outdoor shooting."
+      "name": "SHOPCAMZON Extendable",
+      "tagline": "1.8m extendable rod for outdoor wide-angle shots."
+    },
+    "hq_product_1": {
+      "name": "SHOPCAMZON AI Standard",
+      "tagline": "Sleek black gimbal with high-precision AI tracking."
+    },
+    "hq_product_2": {
+      "name": "SHOPCAMZON Fill Light Edition",
+      "tagline": "Modern studio photography gear with integrated fill light."
+    },
+    "hq_product_3": {
+      "name": "SHOPCAMZON Smart Remote",
+      "tagline": "Advanced Bluetooth remote control with custom macros."
+    },
+    "hq_product_4": {
+      "name": "SHOPCAMZON Vlogger Pro",
+      "tagline": "Ultimate tracking setup for elegant and modern content creation."
     }
   }
 }

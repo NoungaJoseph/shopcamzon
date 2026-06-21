@@ -19,7 +19,7 @@
   "checkout": "Proceed to Checkout",
   "checkoutWhatsApp": "Checkout via WhatsApp",
   "whatsapp": {
-    "greeting": "Hello AeroTrack, I would like to place an order:",
+    "greeting": "Hello SHOPCAMZON, I would like to place an order:",
     "nextStep": "Please let me know how to proceed with payment and delivery."
   }
 }

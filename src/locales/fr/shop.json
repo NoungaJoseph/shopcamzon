@@ -1,7 +1,7 @@
 {
-  "title": "Boutique AeroTrack",
+  "title": "Boutique SHOPCAMZON",
   "intro": "Explorez notre gamme complete d'equipements de suivi IA intelligent. Des modeles de poche compacts aux configurations de studio completes.",
-  "detailDescription": "Cette edition premium AeroTrack apporte le suivi de visage par IA, une rotation stable a 360 degres et des commandes gestuelles simples. Concue avec des materiaux solides pour supporter les smartphones et les cameras, elle est ideale pour les vloggers, les streamers et les createurs de contenu qui veulent un rendu professionnel.",
+  "detailDescription": "Cette edition premium SHOPCAMZON apporte le suivi de visage par IA, une rotation stable a 360 degres et des commandes gestuelles simples. Concue avec des materiaux solides pour supporter les smartphones et les cameras, elle est ideale pour les vloggers, les streamers et les createurs de contenu qui veulent un rendu professionnel.",
   "filters": {
     "all": "Tous les produits",
     "handheld": "Poche",
@@ -10,20 +10,36 @@
   },
   "products": {
     "product_1": {
-      "name": "AeroTrack Base",
+      "name": "SHOPCAMZON Base",
       "tagline": "Suivi intelligent, anti-tremblement professionnel."
     },
     "product_5": {
-      "name": "AeroTrack Pro Studio",
+      "name": "SHOPCAMZON Pro Studio",
       "tagline": "Comprend deux lumieres d'appoint magnetiques pour le direct."
     },
     "product_8": {
-      "name": "AeroTrack Remote Edition",
+      "name": "SHOPCAMZON Remote Edition",
       "tagline": "Telecommande Bluetooth a charge rapide."
     },
     "product_9": {
-      "name": "AeroTrack Extendable",
+      "name": "SHOPCAMZON Extendable",
       "tagline": "Tige extensible de 1,8 m pour prises de vue exterieures grand angle."
+    },
+    "hq_product_1": {
+      "name": "SHOPCAMZON AI Standard",
+      "tagline": "Cardan noir élégant avec suivi IA de haute précision."
+    },
+    "hq_product_2": {
+      "name": "SHOPCAMZON Fill Light Edition",
+      "tagline": "Équipement de studio moderne avec lumière d'appoint intégrée."
+    },
+    "hq_product_3": {
+      "name": "SHOPCAMZON Smart Remote",
+      "tagline": "Télécommande Bluetooth avancée avec macros personnalisées."
+    },
+    "hq_product_4": {
+      "name": "SHOPCAMZON Vlogger Pro",
+      "tagline": "Configuration de suivi ultime pour la création de contenu élégante et moderne."
     }
   }
 }

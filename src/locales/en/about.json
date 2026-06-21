@@ -1,8 +1,8 @@
 {
-  "title": "About AeroTrack",
+  "title": "About SHOPCAMZON",
   "story": {
     "title": "The Innovation",
-    "p1": "AeroTrack was born out of a simple idea: content creation should be hands-free, intuitive, and limitless. We set out to build the ultimate 'black technology' intelligent companion for solo creators.",
+    "p1": "SHOPCAMZON was born out of a simple idea: content creation should be hands-free, intuitive, and limitless. We set out to build the ultimate 'black technology' intelligent companion for solo creators.",
     "p2": "By integrating an advanced AI tracking chip directly into the hardware, we bypassed the need for clunky apps or Bluetooth tethering. You turn it on, and it follows you."
   },
   "mission": {
@@ -11,9 +11,9 @@
   },
   "howItWorks": {
     "title": "How Our Products Work",
-    "intro": "Every AeroTrack product is designed to be intuitive and completely app-free. Here is how you can use each model to its full potential:",
+    "intro": "Every SHOPCAMZON product is designed to be intuitive and completely app-free. Here is how you can use each model to its full potential:",
     "product_1": {
-      "name": "AeroTrack Base",
+      "name": "SHOPCAMZON Base",
       "steps": [
         "1. Turn on the device and mount your phone.",
         "2. Stand in front of the AI sensor.",
@@ -22,7 +22,7 @@
       ]
     },
     "product_5": {
-      "name": "AeroTrack Pro Studio",
+      "name": "SHOPCAMZON Pro Studio",
       "steps": [
         "1. Attach the dual fill lights to the sides of the mount.",
         "2. Turn on the lights and adjust the brightness and color temperature.",
@@ -31,7 +31,7 @@
       ]
     },
     "product_8": {
-      "name": "AeroTrack Remote Edition",
+      "name": "SHOPCAMZON Remote Edition",
       "steps": [
         "1. Power on the device and connect the Bluetooth remote to your phone.",
         "2. Use the remote to start or stop video recording from a distance.",
@@ -40,7 +40,7 @@
       ]
     },
     "product_9": {
-      "name": "AeroTrack Extendable Edition",
+      "name": "SHOPCAMZON Extendable Edition",
       "steps": [
         "1. Pull the telescopic rod to extend the tripod up to your desired height.",
         "2. Open the tripod legs for a stable base on uneven terrain.",

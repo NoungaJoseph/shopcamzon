@@ -19,7 +19,7 @@
   "checkout": "Passer a la caisse",
   "checkoutWhatsApp": "Commander via WhatsApp",
   "whatsapp": {
-    "greeting": "Bonjour AeroTrack, je souhaite passer une commande :",
+    "greeting": "Bonjour SHOPCAMZON, je souhaite passer une commande :",
     "nextStep": "Merci de m'indiquer comment proceder au paiement et a la livraison."
   }
 }

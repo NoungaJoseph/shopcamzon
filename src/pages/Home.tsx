@@ -12,7 +12,7 @@ export const Home: React.FC = () => {
   const { t } = useTranslation(['home', 'common', 'shop']);
   const scrollRef = useRef<HTMLDivElement>(null);
   const { addToCart } = useCart();
-  
+
   // Showcase video state
   const showcaseVideoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -26,7 +26,7 @@ export const Home: React.FC = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            video.play().catch(() => {}); // Catch autoplay rejection
+            video.play().catch(() => { }); // Catch autoplay rejection
             setIsPlaying(true);
           } else {
             video.pause();
@@ -56,8 +56,8 @@ export const Home: React.FC = () => {
     { id: 'product_9', img: '9' },
   ];
 
-  const advantages = t('home:advantages.items', { returnObjects: true }) as Array<{title: string, desc: string}>;
-  const productDetails = t('home:productDetails.items', { returnObjects: true }) as Array<{num: string, title: string, desc: string}>;
+  const advantages = t('home:advantages.items', { returnObjects: true }) as Array<{ title: string, desc: string }>;
+  const productDetails = t('home:productDetails.items', { returnObjects: true }) as Array<{ num: string, title: string, desc: string }>;
 
   // Icons for advantages
   const AdvantageIcons = [Crosshair, Maximize, Bluetooth, Smartphone, RefreshCw, Battery];
@@ -76,7 +76,7 @@ export const Home: React.FC = () => {
               {t('home:hero.subtitle')}
             </p>
           </Reveal>
-          
+
           <Reveal className="relative h-[400px] md:h-[500px] flex justify-center items-center">
             <ProductModelViewer className="w-full h-full" />
           </Reveal>
@@ -103,7 +103,7 @@ export const Home: React.FC = () => {
             <Divider />
             <p className="text-[var(--color-text-muted)] mt-4">{t('home:advantages.description')}</p>
           </Reveal>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
             {advantages.map((item, i) => {
               const Icon = AdvantageIcons[i % AdvantageIcons.length];
@@ -128,7 +128,7 @@ export const Home: React.FC = () => {
             <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:productDetails.title', 'Design Details')}</h2>
             <Divider />
           </Reveal>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {productDetails.map((item, i) => {
               const detailImages = ['13', '14', '15'];
@@ -157,53 +157,49 @@ export const Home: React.FC = () => {
             <Divider />
             <p className="text-[var(--color-text-muted)] mt-4">{t('home:featured.description')}</p>
           </Reveal>
-          
-          <Reveal className="relative">
+
+          <Reveal className="relative mt-8">
             <button 
               onClick={() => scroll('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/80 rounded-full shadow hover:bg-white transition-colors" 
+              className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors" 
               aria-label="Previous"
             >
-              <ChevronLeft size={32} strokeWidth={1.5} />
+              <ChevronLeft size={24} strokeWidth={2} />
             </button>
             <div 
               ref={scrollRef}
-              className="flex space-x-8 overflow-x-auto scrollbar-hide px-12 py-8 snap-x snap-mandatory"
+              className="flex space-x-6 overflow-x-auto scrollbar-hide px-6 md:px-12 py-4 snap-x snap-mandatory"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {carouselItems.map((item) => (
-                <div key={item.id} className="snap-start shrink-0">
-                  <div className="w-[280px] h-[400px] transition-transform flex items-end cursor-pointer relative overflow-hidden bg-[var(--color-bg-white)] shadow-sm group">
-                    <img src={`/${item.img}.jpg`} alt="Product" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    
-                    <div className="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center gap-4 z-20">
-                      <Link to={`/product/${item.id}`} className="bg-white text-black px-6 py-2 uppercase font-bold text-xs tracking-wider hover:bg-gray-200 transition-colors">
-                        {t('common:buttons.viewDetails', 'View Details')}
-                      </Link>
-                      <button 
-                        onClick={(e) => {
-                          e.preventDefault();
-                          addToCart({ id: item.id, name: t(`shop:products.${item.id}.name`), price: 60000, img: item.img });
-                        }}
-                        className="bg-black text-white px-6 py-2 uppercase font-bold text-xs tracking-wider border border-white hover:bg-gray-800 transition-colors"
-                      >
-                        {t('common:buttons.addToCart', 'Add to Cart')}
-                      </button>
+                <div key={item.id} className="snap-center shrink-0 w-[85vw] sm:w-[320px] flex flex-col bg-white border border-[var(--color-black)] group">
+                  <Link to={`/product/${item.id}`} className="block w-full aspect-[4/5] relative overflow-hidden bg-white p-6">
+                    <img src={`/${item.img}.jpg`} alt={t(`shop:products.${item.id}.name`)} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                  </Link>
+                  <div className="bg-[var(--color-bg-cream)] p-6 flex flex-col border-t border-[var(--color-black)] flex-grow justify-between">
+                    <div className="flex justify-between items-start gap-4 mb-6">
+                      <h3 className="text-lg font-headline tracking-wide text-[var(--color-black)] leading-tight text-left">{t(`shop:products.${item.id}.name`)}</h3>
+                      <span className="text-lg font-body whitespace-nowrap text-[var(--color-text-muted)]">60,000 XAF</span>
                     </div>
-
-                    <span className="bg-white px-4 py-2 text-sm font-semibold z-10 uppercase tracking-wide translate-y-full md:translate-y-0 md:group-hover:translate-y-full transition-transform duration-300">
-                      {t(`shop:products.${item.id}.name`)}
-                    </span>
+                    <button 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart({ id: item.id, name: t(`shop:products.${item.id}.name`), price: 60000, img: item.img });
+                      }}
+                      className="w-full bg-transparent text-[var(--color-black)] px-6 py-3 uppercase font-bold text-xs tracking-wider border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors"
+                    >
+                      {t('common:buttons.addToCart', 'Add to Cart')}
+                    </button>
                   </div>
                 </div>
               ))}
             </div>
             <button 
               onClick={() => scroll('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/80 rounded-full shadow hover:bg-white transition-colors" 
+              className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors" 
               aria-label="Next"
             >
-              <ChevronRight size={32} strokeWidth={1.5} />
+              <ChevronRight size={24} strokeWidth={2} />
             </button>
           </Reveal>
         </div>
@@ -216,10 +212,10 @@ export const Home: React.FC = () => {
             <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:videoShowcase.title', 'See It In Action')}</h2>
             <Divider />
           </Reveal>
-          
+
           <Reveal className="max-w-5xl mx-auto">
             <div className="relative aspect-video bg-black flex items-center justify-center">
-              <video 
+              <video
                 ref={showcaseVideoRef}
                 className="w-full h-full object-cover"
                 poster="/16.jpg"
@@ -240,7 +236,7 @@ export const Home: React.FC = () => {
       <section className="bg-[var(--color-bg-white)]">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <Reveal className="bg-[var(--color-bg-cream)] h-[500px] flex items-center justify-center relative overflow-hidden">
-             <img src="/16.jpg" alt="Promo Lifestyle" className="absolute w-full h-full object-cover" />
+            <img src="/16.jpg" alt="Promo Lifestyle" className="absolute w-full h-full object-cover" />
           </Reveal>
           <Reveal className="flex flex-col justify-center px-12 py-16 md:px-24">
             <span className="text-xs uppercase tracking-widest mb-4 font-semibold text-[var(--color-text-primary)]">{t('home:advantages.title')}</span>
@@ -258,13 +254,13 @@ export const Home: React.FC = () => {
       <section className="bg-[var(--color-bg-white)] py-24 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal className="text-center mb-16 flex flex-col items-center">
-            <h2 className="text-3xl font-headline uppercase tracking-widest">AI Gesture Control</h2>
+            <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:gestureGuide.title', 'AI Gesture Control')}</h2>
             <Divider />
             <p className="text-[var(--color-text-muted)] mt-4 max-w-2xl">
-              Take full control of your shooting experience with intuitive hand gestures.
+              {t('home:gestureGuide.subtitle', 'Take full control of your shooting experience with intuitive hand gestures.')}
             </p>
           </Reveal>
-          
+
           <Reveal className="max-w-4xl mx-auto flex justify-center">
             <img src="/23.jpg" alt="AI Gesture Control Signs" className="w-full max-w-2xl rounded-xl shadow-lg border border-gray-100" />
           </Reveal>
@@ -293,7 +289,7 @@ export const Home: React.FC = () => {
       <section className="bg-[var(--color-bg-white)]">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <Reveal className="bg-[var(--color-bg-cream)] h-[500px] flex items-center justify-center relative overflow-hidden">
-             <img src="/22.jpg" alt="Lifestyle Group" className="absolute w-full h-full object-cover" />
+            <img src="/22.jpg" alt="Lifestyle Group" className="absolute w-full h-full object-cover" />
           </Reveal>
           <Reveal className="flex flex-col justify-center px-12 py-16 md:px-24 bg-[var(--color-bg-cream)] md:bg-[var(--color-bg-white)]">
             <span className="text-xs uppercase tracking-widest mb-4 font-semibold text-[var(--color-text-primary)]">Lifestyle</span>
@@ -304,13 +300,90 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Q04 Product Feature Section */}
+      <section className="bg-[var(--color-bg-cream)] py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <Reveal className="text-center mb-16 flex flex-col items-center">
+            <span className="text-xs uppercase tracking-widest mb-4 font-semibold text-[var(--color-text-muted)]">Q04-Basic</span>
+            <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:q04.title', 'Packed With Technology')}</h2>
+            <Divider />
+            <p className="text-[var(--color-text-muted)] mt-4 max-w-xl">{t('home:q04.subtitle', 'Every feature engineered for the modern content creator.')}</p>
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
+            <Reveal className="overflow-hidden">
+              <img src="/q04-features.jpg" alt="Q04-Basic Features" className="w-full h-full object-contain" />
+            </Reveal>
+            <Reveal className="bg-white p-12 flex flex-col gap-5">
+              {[
+                { icon: '📡', title: t('home:q04.features.bluetooth', 'Bluetooth Remote Control'), desc: t('home:q04.features.bluetoothDesc', 'Control your shots from a distance with the included Bluetooth remote.') },
+                { icon: '🔄', title: t('home:q04.features.rotation', '360° Rotation Follow-up'), desc: t('home:q04.features.rotationDesc', 'Seamless full-circle AI face tracking keeps you in frame at all times.') },
+                { icon: '⚡', title: t('home:q04.features.charging', 'TYPE-C Fast Charging'), desc: t('home:q04.features.chargingDesc', '7 hours of battery life with modern Type-C fast charging support.') },
+                { icon: '📱', title: t('home:q04.features.noApp', 'No App Required'), desc: t('home:q04.features.noAppDesc', 'Works straight out of the box — zero downloads, zero setup needed.') },
+              ].map((feature, i) => (
+                <div key={i} className="flex gap-4 items-start">
+                  <span className="text-2xl mt-1">{feature.icon}</span>
+                  <div>
+                    <h4 className="font-bold uppercase tracking-wider text-sm mb-1">{feature.title}</h4>
+                    <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">{feature.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Remote Control Guide Section */}
+      <section className="bg-[var(--color-bg-white)] py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <Reveal className="text-center mb-16 flex flex-col items-center">
+            <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:remoteGuide.title', 'Master Your Remote')}</h2>
+            <Divider />
+            <p className="text-[var(--color-text-muted)] mt-4 max-w-xl">{t('home:remoteGuide.subtitle', 'Every button on your Bluetooth remote has a purpose. Here is what each one does.')}</p>
+          </Reveal>
+          <Reveal className="max-w-4xl mx-auto overflow-hidden shadow-lg">
+            <img src="/remote-guide.jpg" alt="Remote Control Guide" className="w-full h-auto object-contain" />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Gesture Control Section */}
+      <section className="bg-[var(--color-bg-cream)] py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <Reveal className="text-center mb-16 flex flex-col items-center">
+            <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:gestureGuide.title', 'AI Gesture Control')}</h2>
+            <Divider />
+            <p className="text-[var(--color-text-muted)] mt-4 max-w-xl">{t('home:gestureGuide.subtitle', 'Your hands are the controller. Use simple gestures to start tracking, take photos, or pause.')}</p>
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <Reveal className="overflow-hidden">
+              <img src="/gesture-guide.jpg" alt="AI Gesture Control Guide" className="w-full h-auto object-contain" />
+            </Reveal>
+            <Reveal className="flex flex-col gap-6">
+              <div className="bg-white p-8 border-l-4 border-[var(--color-black)]">
+                <h4 className="font-headline uppercase tracking-widest text-xl mb-3">{t('home:gestureGuide.ok', '👌 OK Gesture')}</h4>
+                <p className="text-[var(--color-text-muted)] leading-relaxed">{t('home:gestureGuide.okDesc', 'Show the OK hand sign to the camera and the tracker will begin following you within 1 second.')}</p>
+              </div>
+              <div className="bg-white p-8 border-l-4 border-[var(--color-text-muted)]">
+                <h4 className="font-headline uppercase tracking-widest text-xl mb-3">{t('home:gestureGuide.palm', '🤚 Palm Gesture')}</h4>
+                <p className="text-[var(--color-text-muted)] leading-relaxed">{t('home:gestureGuide.palmDesc', 'Hold your open palm up to the camera. Within 3 seconds, tracking will pause and the device will hold its position.')}</p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* 5.5 Newsletter */}
-      <section className="bg-[var(--color-bg-cream)] py-32 relative overflow-hidden">
+      <section className="relative py-32 overflow-hidden bg-black text-white">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src="/contact.png" alt="Stay Updated Background" className="w-full h-full object-cover object-center opacity-40" />
+        </div>
         <Reveal className="max-w-2xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
-          <span className="text-sm uppercase tracking-widest mb-4 font-semibold text-[var(--color-text-muted)]">{t('home:newsletter.label', 'Stay Updated')}</span>
-          <h2 className="text-4xl md:text-5xl font-headline uppercase tracking-widest">{t('home:newsletter.title')}</h2>
+          <span className="text-sm uppercase tracking-widest mb-4 font-semibold text-white/80">{t('home:newsletter.label', 'Stay Updated')}</span>
+          <h2 className="text-4xl md:text-5xl font-headline uppercase tracking-widest text-white">{t('home:newsletter.title')}</h2>
           <div className="mt-10">
-            <Button variant="outline">{t('home:newsletter.button')}</Button>
+            <Button variant="outline" className="border-white text-[var(--color-black)] hover:bg-white hover:text-black">{t('home:newsletter.button')}</Button>
           </div>
         </Reveal>
       </section>
@@ -320,9 +393,9 @@ export const Home: React.FC = () => {
         <Reveal className="text-center mb-16 flex flex-col items-center">
           <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:gallery.title', 'Gallery')}</h2>
           <Divider />
-          <p className="text-[var(--color-text-muted)] mt-4">{t('home:gallery.subtitle', 'Follow us @AeroTrack')}</p>
+          <p className="text-[var(--color-text-muted)] mt-4">{t('home:gallery.subtitle', 'Follow us @Shopcamzon')}</p>
         </Reveal>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full gap-0">
           {[17, 18, 19, 20].map((imgNum) => (
             <div key={imgNum} className="aspect-square bg-gray-200 overflow-hidden relative group cursor-pointer border-none rounded-none">

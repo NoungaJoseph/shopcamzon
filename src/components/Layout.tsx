@@ -7,7 +7,7 @@ import { CartToast } from './CartToast';
 
 export const Layout: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[var(--color-bg-cream)] text-[var(--color-text-primary)]">
+    <div className="min-h-screen flex flex-col bg-[var(--color-bg-cream)] text-[var(--color-text-primary)] overflow-x-clip w-full relative">
       <Header />
       <CartToast />
       <main className="flex-grow">
