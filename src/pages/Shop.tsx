@@ -34,8 +34,8 @@ export const Shop: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {products.map((p) => (
             <Reveal key={p.id} className="flex flex-col bg-white border border-[var(--color-black)] group">
-              <Link to={`/product/${p.id}`} className="block w-full aspect-[4/5] relative overflow-hidden bg-white p-6">
-                <img src={`/${p.img}.jpg`} alt={t(`shop:products.${p.id}.name`)} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+              <Link to={`/product/${p.id}`} className="block w-full aspect-[4/5] relative overflow-hidden bg-white">
+                <img src={`/${p.img}.jpg`} alt={t(`shop:products.${p.id}.name`)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </Link>
               <div className="bg-[var(--color-bg-cream)] p-6 flex flex-col border-t border-[var(--color-black)] flex-grow justify-between">
                 <div className="flex justify-between items-start gap-4 mb-6">

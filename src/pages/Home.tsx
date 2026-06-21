@@ -50,10 +50,10 @@ export const Home: React.FC = () => {
   };
 
   const carouselItems = [
-    { id: 'product_1', img: '1' },
-    { id: 'product_5', img: '5' },
-    { id: 'product_8', img: '8' },
-    { id: 'product_9', img: '9' },
+    { id: 'hq_product_1', img: 'hq_product_1' },
+    { id: 'hq_product_2', img: 'hq_product_2' },
+    { id: 'hq_product_3', img: 'hq_product_3' },
+    { id: 'hq_product_4', img: 'hq_product_4' },
   ];
 
   const advantages = t('home:advantages.items', { returnObjects: true }) as Array<{ title: string, desc: string }>;
@@ -173,8 +173,8 @@ export const Home: React.FC = () => {
             >
               {carouselItems.map((item) => (
                 <div key={item.id} className="snap-center shrink-0 w-[85vw] sm:w-[320px] flex flex-col bg-white border border-[var(--color-black)] group">
-                  <Link to={`/product/${item.id}`} className="block w-full aspect-[4/5] relative overflow-hidden bg-white p-6">
-                    <img src={`/${item.img}.jpg`} alt={t(`shop:products.${item.id}.name`)} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                  <Link to={`/product/${item.id}`} className="block w-full aspect-[4/5] relative overflow-hidden bg-white">
+                    <img src={`/${item.img}.jpg`} alt={t(`shop:products.${item.id}.name`)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </Link>
                   <div className="bg-[var(--color-bg-cream)] p-6 flex flex-col border-t border-[var(--color-black)] flex-grow justify-between">
                     <div className="flex justify-between items-start gap-4 mb-6">
