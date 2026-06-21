@@ -159,14 +159,14 @@ export const Home: React.FC = () => {
           </Reveal>
 
           <Reveal className="relative mt-8">
-            <button 
+            <button
               onClick={() => scroll('left')}
-              className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors" 
+              className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors"
               aria-label="Previous"
             >
               <ChevronLeft size={24} strokeWidth={2} />
             </button>
-            <div 
+            <div
               ref={scrollRef}
               className="flex space-x-6 overflow-x-auto scrollbar-hide px-6 md:px-12 py-4 snap-x snap-mandatory"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
@@ -181,7 +181,7 @@ export const Home: React.FC = () => {
                       <h3 className="text-lg font-headline tracking-wide text-[var(--color-black)] leading-tight text-left">{t(`shop:products.${item.id}.name`)}</h3>
                       <span className="text-lg font-body whitespace-nowrap text-[var(--color-text-muted)]">60,000 XAF</span>
                     </div>
-                    <button 
+                    <button
                       onClick={(e) => {
                         e.preventDefault();
                         addToCart({ id: item.id, name: t(`shop:products.${item.id}.name`), price: 60000, img: item.img });
@@ -194,9 +194,9 @@ export const Home: React.FC = () => {
                 </div>
               ))}
             </div>
-            <button 
+            <button
               onClick={() => scroll('right')}
-              className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors" 
+              className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors"
               aria-label="Next"
             >
               <ChevronRight size={24} strokeWidth={2} />

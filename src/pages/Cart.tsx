@@ -41,24 +41,29 @@ export const Cart: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div className="lg:col-span-2 flex flex-col gap-8">
               {items.map((item) => (
-                <Reveal key={item.id} className="flex gap-6 items-center border-b border-gray-100 pb-8">
-                  <div className="w-24 h-24 bg-[var(--color-bg-cream)] shrink-0">
+                <Reveal key={item.id} className="flex gap-4 sm:gap-6 items-start sm:items-center border-b border-gray-100 pb-8 flex-wrap sm:flex-nowrap">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[var(--color-bg-cream)] shrink-0">
                     <img src={`/${item.img}.jpg`} alt={item.name} className="w-full h-full object-cover" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold uppercase tracking-wider mb-2">{t(`shop:products.${item.id}.name`, item.name)}</h3>
-                    <span className="text-[var(--color-text-muted)]">{item.price.toLocaleString()} XAF</span>
+                  <div className="flex-1 min-w-[150px]">
+                    <div className="flex justify-between items-start">
+                      <h3 className="font-bold uppercase tracking-wider mb-1 pr-2 sm:pr-0 text-sm sm:text-base">{t(`shop:products.${item.id}.name`, item.name)}</h3>
+                      <div className="font-bold sm:hidden text-right whitespace-nowrap text-sm">
+                        {(item.price * item.quantity).toLocaleString()} XAF
+                      </div>
+                    </div>
+                    <span className="text-[var(--color-text-muted)] text-xs sm:text-sm">{item.price.toLocaleString()} XAF</span>
 
-                    <div className="flex items-center gap-4 mt-4">
+                    <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-4">
                       <div className="flex items-center border border-gray-200">
                         <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="px-3 py-1 hover:bg-gray-50">-</button>
                         <span className="px-3 py-1 border-x border-gray-200 text-sm">{item.quantity}</span>
                         <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="px-3 py-1 hover:bg-gray-50">+</button>
                       </div>
-                      <button onClick={() => removeFromCart(item.id)} className="text-sm text-red-500 underline uppercase tracking-wider font-semibold">{t('cart:remove', 'Remove')}</button>
+                      <button onClick={() => removeFromCart(item.id)} className="text-xs sm:text-sm text-red-500 underline uppercase tracking-wider font-semibold">{t('cart:remove', 'Remove')}</button>
                     </div>
                   </div>
-                  <div className="font-bold">
+                  <div className="font-bold hidden sm:block shrink-0">
                     {(item.price * item.quantity).toLocaleString()} XAF
                   </div>
                 </Reveal>
