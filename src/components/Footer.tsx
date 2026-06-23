@@ -8,21 +8,27 @@ export const Footer: React.FC = () => {
   const { t } = useTranslation(['footer']);
 
   return (
-    <footer className="bg-white pt-24 pb-8">
+    <footer className="bg-[var(--color-brand-skyblue)] text-white pt-24 pb-8">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
         
         {/* Column 1 */}
         <div className="flex flex-col">
-          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-[var(--color-text-primary)]">{t('footer:socials')}</h4>
-          <div className="flex space-x-4 mt-6">
-            <a href="#" className="hover:opacity-75 transition-colors" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stopColor="#f09433"/><stop offset="25%" stopColor="#e6683c"/><stop offset="50%" stopColor="#dc2743"/><stop offset="75%" stopColor="#cc2366"/><stop offset="100%" stopColor="#bc1888"/></linearGradient></defs><path fill="url(#ig)" d="M12,2.16c3.2,0,3.58,0,4.85,0.07c3.25,0.15,4.77,1.69,4.92,4.92c0.06,1.27,0.07,1.65,0.07,4.85s0,3.58-0.07,4.85c-0.15,3.23-1.66,4.77-4.92,4.92c-1.27,0.06-1.64,0.07-4.85,0.07s-3.58,0-4.85-0.07c-3.26-0.15-4.77-1.7-4.92-4.92C2.17,15.58,2.16,15.2,2.16,12s0-3.58,0.07-4.85C2.38,3.93,3.89,2.38,7.15,2.23C8.42,2.17,8.8,2.16,12,2.16z M12,7.16A4.84,4.84,0,1,0,16.84,12,4.84,4.84,0,0,0,12,7.16Zm0,7.91A3.07,3.07,0,1,1,15.07,12,3.07,3.07,0,0,1,12,15.07Zm3.8-8.21a1.18,1.18,0,1,1-1.18-1.18A1.18,1.18,0,0,1,15.8,6.86Z"/></svg>
+          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-white">{t('footer:socials')}</h4>
+          <div className="flex space-x-4 mt-6 text-white">
+            <a href="#" className="hover:opacity-75 transition-opacity" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.98a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
             </a>
-            <a href="#" className="hover:opacity-75 transition-colors" aria-label="Twitter">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1DA1F2" d="M23.95,4.57a10,10,0,0,1-2.82.77,4.96,4.96,0,0,0,2.16-2.72,9.9,9.9,0,0,1-3.12,1.19,4.92,4.92,0,0,0-8.38,4.48A13.95,13.95,0,0,1,1.67,3.15,4.92,4.92,0,0,0,3.19,9.72,4.86,4.86,0,0,1,.96,9.11v.06a4.93,4.93,0,0,0,3.95,4.83,4.86,4.86,0,0,1-2.22.08,4.93,4.93,0,0,0,4.6,3.42A9.87,9.87,0,0,1,0,19.54,13.94,13.94,0,0,0,7.55,21.7c9.06,0,14-7.5,14-14,0-.21,0-.42-.01-.63A10,10,0,0,0,24,4.59Z"/></svg>
+            <a href="#" className="hover:opacity-75 transition-opacity" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
             </a>
-            <a href="#" className="hover:opacity-75 transition-colors" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <a href="#" className="hover:opacity-75 transition-opacity" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+              </svg>
             </a>
           </div>
           <div className="mt-8">
@@ -32,27 +38,27 @@ export const Footer: React.FC = () => {
         
         {/* Column 2 */}
         <div className="flex flex-col">
-          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-[var(--color-text-primary)]">{t('footer:newsletter.title')}</h4>
+          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-white">{t('footer:newsletter.title')}</h4>
           <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
             <input 
               type="email" 
               placeholder={t('footer:newsletter.placeholder')}
-              className="border border-[var(--color-black)] px-4 py-3 rounded-none focus:outline-none focus:ring-1 focus:ring-[var(--color-black)]"
+              className="border border-white/20 bg-white/5 text-white px-4 py-3 rounded-none focus:outline-none focus:ring-1 focus:ring-white placeholder-white/50"
             />
-            <label className="flex items-center space-x-3 text-sm text-[var(--color-text-muted)] cursor-pointer">
-              <input type="checkbox" className="accent-[var(--color-black)] w-4 h-4 rounded-none cursor-pointer" />
+            <label className="flex items-center space-x-3 text-sm text-white/70 cursor-pointer">
+              <input type="checkbox" className="accent-[var(--color-brand-red)] w-4 h-4 rounded-none cursor-pointer" />
               <span>{t('footer:newsletter.consent')}</span>
             </label>
-            <Button variant="solid" className="mt-2 w-fit text-xs">{t('footer:newsletter.button')}</Button>
+            <Button variant="outline" className="mt-2 w-fit text-xs border-white text-white hover:bg-white hover:text-[var(--color-brand-skyblue)]">{t('footer:newsletter.button')}</Button>
           </form>
         </div>
         
         {/* Column 3 */}
         <div className="flex flex-col">
-          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-[var(--color-text-primary)]">{t('footer:contact.title')}</h4>
-          <div className="text-[var(--color-text-muted)] font-body flex flex-col gap-4">
+          <h4 className="font-headline uppercase tracking-widest text-sm mb-6 text-white">{t('footer:contact.title')}</h4>
+          <div className="text-white/70 font-body flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <a href="tel:+237678237456" className="hover:text-[var(--color-accent)] transition-colors" aria-label="Call">
+              <a href="tel:+237678237456" className="hover:text-[var(--color-brand-red)] transition-colors" aria-label="Call">
                 <Phone size={20} strokeWidth={1.5} />
               </a>
               <a href="https://wa.me/237678237456" target="_blank" rel="noopener noreferrer" className="hover:opacity-75 transition-opacity" aria-label="WhatsApp">
@@ -63,10 +69,10 @@ export const Footer: React.FC = () => {
               <span className="text-sm font-semibold">+237 6 78 23 74 56</span>
             </div>
             <div className="flex items-center gap-3">
-              <a href="mailto:olatransagency@gmail.com" className="hover:text-[var(--color-accent)] transition-colors" aria-label="Email">
+              <a href="mailto:olatransagency@gmail.com" className="hover:text-[var(--color-brand-red)] transition-colors" aria-label="Email">
                 <Mail size={20} strokeWidth={1.5} />
               </a>
-              <a href="mailto:olatransagency@gmail.com" className="hover:text-[var(--color-accent)] transition-colors underline underline-offset-4 text-sm">
+              <a href="mailto:olatransagency@gmail.com" className="hover:text-[var(--color-brand-red)] transition-colors underline underline-offset-4 text-sm">
                 olatransagency@gmail.com
               </a>
             </div>
@@ -75,7 +81,7 @@ export const Footer: React.FC = () => {
         
       </div>
       
-      <div className="max-w-7xl mx-auto px-6 pt-12 text-center text-[var(--color-text-muted)] text-sm">
+      <div className="max-w-7xl mx-auto px-6 pt-12 text-center text-white/50 text-sm">
         <p>{t('footer:copyright', { year: new Date().getFullYear() })}</p>
       </div>
     </footer>

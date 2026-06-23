@@ -23,8 +23,8 @@ export const Button: React.FC<ButtonProps> = ({
   const baseClasses = "inline-flex items-center justify-center font-body text-base font-semibold px-[32px] py-[12px] rounded-none transition-all duration-250 ease-out cursor-pointer text-center";
   
   const variants = {
-    solid: "bg-[var(--color-black)] text-[var(--color-white)] hover:opacity-85 border border-transparent",
-    outline: "bg-transparent text-[var(--color-black)] border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-[var(--color-white)]"
+    solid: "bg-[var(--color-brand-red)] text-[var(--color-white)] hover:opacity-85 border border-transparent",
+    outline: "bg-transparent text-[var(--color-brand-black)] border border-[var(--color-brand-black)] hover:bg-[var(--color-brand-red)] hover:text-[var(--color-white)] hover:border-[var(--color-brand-red)]"
   };
 
   const classes = twMerge(

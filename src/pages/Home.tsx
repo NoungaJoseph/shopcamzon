@@ -1,17 +1,21 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import { Reveal } from '../components/Reveal';
 import { Button } from '../components/Button';
 import { Divider } from '../components/Divider';
-import { ProductModelViewer } from '../components/ProductModelViewer';
 import { useCart } from '../context/CartContext';
 import { ChevronLeft, ChevronRight, Maximize, RefreshCw, Smartphone, Bluetooth, Crosshair, Battery } from 'lucide-react';
 
 export const Home: React.FC = () => {
   const { t } = useTranslation(['home', 'common', 'shop']);
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 4000, stopOnInteraction: true })]);
   const { addToCart } = useCart();
+  const { scrollY } = useScroll();
+  const heroY = useTransform(scrollY, [0, 500], [0, 150]);
 
   // Showcase video state
   const showcaseVideoRef = useRef<HTMLVideoElement>(null);
@@ -41,13 +45,13 @@ export const Home: React.FC = () => {
     return () => observer.unobserve(video);
   }, [isPlaying]);
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const { current } = scrollRef;
-      const scrollAmount = direction === 'left' ? -300 : 300;
-      current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   const carouselItems = [
     { id: 'hq_product_1', img: 'hq_product_1' },
@@ -65,20 +69,24 @@ export const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
       {/* 5.1 Hero */}
-      <section className="relative min-h-[80vh] flex items-center pt-10 pb-20 overflow-hidden bg-[var(--color-bg-cream)]">
+      <section 
+        className="relative min-h-[80vh] flex items-center pt-10 pb-20 overflow-hidden bg-[var(--color-bg-cream)]"
+      >
+        <motion.div 
+          className="absolute inset-0 z-0"
+          style={{ backgroundImage: 'url(/header-image.png)', backgroundSize: 'cover', backgroundPosition: 'center', y: heroY }}
+        />
+        {/* Optional overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/20 z-0"></div>
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full relative z-10">
           <Reveal>
-            <h1 className="text-5xl md:text-7xl font-headline whitespace-pre-line leading-tight uppercase tracking-[0.15em] font-light text-[var(--color-text-primary)] drop-shadow-sm">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-headline whitespace-pre-line leading-tight uppercase tracking-[0.15em] font-light text-white drop-shadow-md">
               {t('home:hero.title')}
             </h1>
-            <Divider />
-            <p className="text-[var(--color-text-primary)] text-lg max-w-md mt-6 font-medium">
+            <div className="w-12 h-1 bg-white mt-6 mb-6"></div>
+            <p className="text-white text-lg max-w-md mt-6 font-serif italic drop-shadow-md">
               {t('home:hero.subtitle')}
             </p>
-          </Reveal>
-
-          <Reveal className="relative h-[400px] md:h-[500px] flex justify-center items-center">
-            <ProductModelViewer className="w-full h-full" />
           </Reveal>
         </div>
       </section>
@@ -99,9 +107,9 @@ export const Home: React.FC = () => {
       <section className="bg-[var(--color-bg-cream)] py-24">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal className="text-center mb-20 flex flex-col items-center">
-            <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:advantages.title')}</h2>
+            <h2 className="text-2xl sm:text-3xl font-headline uppercase tracking-widest">{t('home:advantages.title')}</h2>
             <Divider />
-            <p className="text-[var(--color-text-muted)] mt-4">{t('home:advantages.description')}</p>
+            <p className="text-[var(--color-text-muted)] mt-4 font-serif italic">{t('home:advantages.description')}</p>
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
@@ -153,49 +161,47 @@ export const Home: React.FC = () => {
       <section className="bg-[var(--color-bg-cream)] py-24">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal className="text-center mb-16 flex flex-col items-center">
-            <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:featured.title')}</h2>
+            <h2 className="text-2xl sm:text-3xl font-headline uppercase tracking-widest">{t('home:featured.title')}</h2>
             <Divider />
-            <p className="text-[var(--color-text-muted)] mt-4">{t('home:featured.description')}</p>
+            <p className="text-[var(--color-text-muted)] mt-4 font-serif italic">{t('home:featured.description')}</p>
           </Reveal>
 
           <Reveal className="relative mt-8">
             <button
-              onClick={() => scroll('left')}
+              onClick={scrollPrev}
               className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors"
               aria-label="Previous"
             >
               <ChevronLeft size={24} strokeWidth={2} />
             </button>
-            <div
-              ref={scrollRef}
-              className="flex space-x-6 overflow-x-auto scrollbar-hide px-6 md:px-12 py-4 snap-x snap-mandatory"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            >
-              {carouselItems.map((item) => (
-                <div key={item.id} className="snap-center shrink-0 w-[85vw] sm:w-[320px] flex flex-col bg-white border border-[var(--color-black)] group">
-                  <Link to={`/product/${item.id}`} className="block w-full aspect-[4/5] relative overflow-hidden bg-white">
-                    <img src={`/${item.img}.jpg`} alt={t(`shop:products.${item.id}.name`)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </Link>
-                  <div className="bg-[var(--color-bg-cream)] p-6 flex flex-col border-t border-[var(--color-black)] flex-grow justify-between">
-                    <div className="flex justify-between items-start gap-4 mb-6">
-                      <h3 className="text-lg font-headline tracking-wide text-[var(--color-black)] leading-tight text-left">{t(`shop:products.${item.id}.name`)}</h3>
-                      <span className="text-lg font-body whitespace-nowrap text-[var(--color-text-muted)]">60,000 XAF</span>
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex space-x-6 px-6 md:px-12 py-4">
+                {carouselItems.map((item) => (
+                  <div key={item.id} className="flex-[0_0_85vw] sm:flex-[0_0_320px] shrink-0 flex flex-col bg-white border border-[var(--color-black)] group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <Link to={`/product/${item.id}`} className="block w-full aspect-[4/5] relative overflow-hidden bg-white">
+                      <img src={`/${item.img}.jpg`} alt={t(`shop:products.${item.id}.name`)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </Link>
+                    <div className="bg-[var(--color-bg-cream)] p-6 flex flex-col border-t border-[var(--color-black)] flex-grow justify-between">
+                      <div className="flex justify-between items-start gap-4 mb-6">
+                        <h3 className="text-lg font-headline tracking-wide text-[var(--color-black)] leading-tight text-left">{t(`shop:products.${item.id}.name`)}</h3>
+                        <span className="text-lg font-body whitespace-nowrap text-[var(--color-text-muted)]">60,000 XAF</span>
+                      </div>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          addToCart({ id: item.id, name: t(`shop:products.${item.id}.name`), price: 60000, img: item.img });
+                        }}
+                        className="w-full bg-transparent text-[var(--color-black)] px-6 py-3 uppercase font-bold text-xs tracking-wider border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors"
+                      >
+                        {t('common:buttons.addToCart', 'Add to Cart')}
+                      </button>
                     </div>
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        addToCart({ id: item.id, name: t(`shop:products.${item.id}.name`), price: 60000, img: item.img });
-                      }}
-                      className="w-full bg-transparent text-[var(--color-black)] px-6 py-3 uppercase font-bold text-xs tracking-wider border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors"
-                    >
-                      {t('common:buttons.addToCart', 'Add to Cart')}
-                    </button>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
             <button
-              onClick={() => scroll('right')}
+              onClick={scrollNext}
               className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white border border-[var(--color-black)] hover:bg-[var(--color-black)] hover:text-white transition-colors"
               aria-label="Next"
             >
@@ -240,9 +246,9 @@ export const Home: React.FC = () => {
           </Reveal>
           <Reveal className="flex flex-col justify-center px-12 py-16 md:px-24">
             <span className="text-xs uppercase tracking-widest mb-4 font-semibold text-[var(--color-text-primary)]">{t('home:advantages.title')}</span>
-            <h2 className="text-4xl font-headline uppercase tracking-widest leading-tight">{t('home:tech.title')}</h2>
+            <h2 className="text-3xl sm:text-4xl font-headline uppercase tracking-widest leading-tight">{t('home:tech.title')}</h2>
             <Divider />
-            <p className="text-[var(--color-text-muted)] mt-6 mb-8">{t('home:aiCloud.description')}</p>
+            <p className="text-[var(--color-text-muted)] mt-6 mb-8 font-serif italic">{t('home:aiCloud.description')}</p>
             <Link to="/about">
               <Button variant="outline" className="w-fit">{t('common:buttons.seeHowItWorks')}</Button>
             </Link>
@@ -254,9 +260,9 @@ export const Home: React.FC = () => {
       <section className="bg-[var(--color-bg-white)] py-24 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal className="text-center mb-16 flex flex-col items-center">
-            <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:gestureGuide.title', 'AI Gesture Control')}</h2>
+            <h2 className="text-2xl sm:text-3xl font-headline uppercase tracking-widest">{t('home:gestureGuide.title', 'AI Gesture Control')}</h2>
             <Divider />
-            <p className="text-[var(--color-text-muted)] mt-4 max-w-2xl">
+            <p className="text-[var(--color-text-muted)] mt-4 max-w-2xl font-serif italic">
               {t('home:gestureGuide.subtitle', 'Take full control of your shooting experience with intuitive hand gestures.')}
             </p>
           </Reveal>
@@ -270,13 +276,13 @@ export const Home: React.FC = () => {
       {/* 5.4 Promo 2 */}
       <section className="bg-[var(--color-bg-blush)]">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <Reveal className="flex flex-col justify-center px-12 py-16 md:px-24 order-2 md:order-1">
-            <span className="text-xs uppercase tracking-widest mb-4 font-semibold text-[var(--color-text-primary)]">Discover</span>
-            <h2 className="text-4xl font-headline uppercase tracking-widest leading-tight">{t('home:useCases.travel')}</h2>
-            <Divider />
-            <p className="text-[var(--color-text-muted)] mt-6 mb-8">{t('home:useCases.vlogging')}</p>
+          <Reveal className="flex flex-col justify-center px-12 py-16 md:px-24 order-2 md:order-1 text-white">
+            <span className="text-xs uppercase tracking-widest mb-4 font-semibold text-white/80">Discover</span>
+            <h2 className="text-3xl sm:text-4xl font-headline uppercase tracking-widest leading-tight">{t('home:useCases.travel')}</h2>
+            <Divider className="border-white" />
+            <p className="text-white/80 mt-6 mb-8">{t('home:useCases.vlogging')}</p>
             <Link to="/shop">
-              <Button variant="outline" className="w-fit">{t('common:buttons.discoverRange')}</Button>
+              <Button variant="outline" className="w-fit border-white text-white hover:bg-white hover:text-[var(--color-brand-skyblue)]">{t('common:buttons.discoverRange')}</Button>
             </Link>
           </Reveal>
           <Reveal className="h-[500px] order-1 md:order-2 flex items-center justify-center overflow-hidden">
@@ -293,9 +299,9 @@ export const Home: React.FC = () => {
           </Reveal>
           <Reveal className="flex flex-col justify-center px-12 py-16 md:px-24 bg-[var(--color-bg-cream)] md:bg-[var(--color-bg-white)]">
             <span className="text-xs uppercase tracking-widest mb-4 font-semibold text-[var(--color-text-primary)]">Lifestyle</span>
-            <h2 className="text-4xl font-headline uppercase tracking-widest leading-tight whitespace-pre-line">{t('home:lifestyle.title', 'Made for every moment')}</h2>
+            <h2 className="text-3xl sm:text-4xl font-headline uppercase tracking-widest leading-tight whitespace-pre-line">{t('home:lifestyle.title', 'Made for every moment')}</h2>
             <Divider />
-            <p className="text-[var(--color-text-muted)] mt-6 mb-8">{t('home:lifestyle.description', 'From solo travel vlogs to group adventures, never miss a shot with intelligent tracking.')}</p>
+            <p className="text-[var(--color-text-muted)] mt-6 mb-8 font-serif italic">{t('home:lifestyle.description', 'From solo travel vlogs to group adventures, never miss a shot with intelligent tracking.')}</p>
           </Reveal>
         </div>
       </section>
@@ -305,9 +311,9 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <Reveal className="text-center mb-16 flex flex-col items-center">
             <span className="text-xs uppercase tracking-widest mb-4 font-semibold text-[var(--color-text-muted)]">Q04-Basic</span>
-            <h2 className="text-3xl font-headline uppercase tracking-widest">{t('home:q04.title', 'Packed With Technology')}</h2>
+            <h2 className="text-2xl sm:text-3xl font-headline uppercase tracking-widest">{t('home:q04.title', 'Packed With Technology')}</h2>
             <Divider />
-            <p className="text-[var(--color-text-muted)] mt-4 max-w-xl">{t('home:q04.subtitle', 'Every feature engineered for the modern content creator.')}</p>
+            <p className="text-[var(--color-text-muted)] mt-4 max-w-xl font-serif italic">{t('home:q04.subtitle', 'Every feature engineered for the modern content creator.')}</p>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
             <Reveal className="overflow-hidden">
@@ -381,7 +387,7 @@ export const Home: React.FC = () => {
         </div>
         <Reveal className="max-w-2xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
           <span className="text-sm uppercase tracking-widest mb-4 font-semibold text-white/80">{t('home:newsletter.label', 'Stay Updated')}</span>
-          <h2 className="text-4xl md:text-5xl font-headline uppercase tracking-widest text-white">{t('home:newsletter.title')}</h2>
+          <h2 className="text-3xl md:text-5xl font-headline uppercase tracking-widest text-white">{t('home:newsletter.title')}</h2>
           <div className="mt-10">
             <Button variant="outline" className="border-white text-[var(--color-black)] hover:bg-white hover:text-black">{t('home:newsletter.button')}</Button>
           </div>

@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
   return (
     <div className="sticky top-0 z-50">
       <AnnouncementBar />
-      <header className="bg-white border-b border-gray-200">
+      <header className="bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           
           <div className="flex items-center gap-4">
@@ -59,7 +59,7 @@ export const Header: React.FC = () => {
                   key={link.path}
                   to={link.path} 
                   className={`text-sm font-body uppercase tracking-wider transition-colors ${
-                    isActive ? 'text-[var(--color-accent)]' : 'text-[#1A1A1A] hover:text-[var(--color-accent)]'
+                    isActive ? 'text-[var(--color-brand-red)]' : 'text-[var(--color-brand-black)] hover:text-[var(--color-brand-red)]'
                   }`}
                 >
                   {t(link.label, link.fallback || '')}
@@ -74,7 +74,7 @@ export const Header: React.FC = () => {
               <select
                 value={currentLanguage.startsWith('fr') ? 'fr' : 'en'}
                 onChange={(event) => changeLanguage(event.target.value)}
-                className="h-8 w-[64px] appearance-none border border-[var(--color-black)] bg-white pl-2 pr-5 text-xs font-bold uppercase tracking-wider text-[#1A1A1A] outline-none transition-colors hover:bg-gray-50"
+                className="h-8 w-[64px] appearance-none border border-[var(--color-brand-black)] bg-white pl-2 pr-5 text-xs font-bold uppercase tracking-wider text-[var(--color-brand-black)] outline-none transition-colors hover:bg-gray-50"
               >
                 {languageOptions.map((option) => (
                   <option key={option.code} value={option.code}>
@@ -82,12 +82,12 @@ export const Header: React.FC = () => {
                   </option>
                 ))}
               </select>
-              <ChevronDown size={14} className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[#1A1A1A]" />
+              <ChevronDown size={14} className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-brand-black)]" />
             </label>
-            <Link to="/cart" onClick={() => setIsMenuOpen(false)} className="relative group hover:text-[var(--color-accent)] transition-colors text-[#1A1A1A]">
+            <Link to="/cart" onClick={() => setIsMenuOpen(false)} className="relative group hover:text-[var(--color-brand-red)] transition-colors text-[var(--color-brand-black)]">
               <ShoppingCart size={24} strokeWidth={1.5} />
               {itemCount > 0 && (
-                <span className="absolute -top-1 -right-2 bg-[var(--color-black)] text-white text-[10px] w-[18px] h-[18px] flex items-center justify-center rounded-full font-bold">
+                <span className="absolute -top-1 -right-2 bg-[var(--color-brand-red)] text-white text-[10px] w-[18px] h-[18px] flex items-center justify-center rounded-full font-bold">
                   {itemCount}
                 </span>
               )}
@@ -106,7 +106,7 @@ export const Header: React.FC = () => {
                     to={link.path}
                     onClick={() => setIsMenuOpen(false)}
                     className={`text-sm font-body uppercase tracking-wider transition-colors ${
-                      isActive ? 'text-[var(--color-accent)]' : 'text-[#1A1A1A]'
+                      isActive ? 'text-[var(--color-brand-red)]' : 'text-[var(--color-brand-black)]'
                     }`}
                   >
                     {t(link.label, link.fallback || '')}

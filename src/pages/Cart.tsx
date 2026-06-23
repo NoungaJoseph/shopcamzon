@@ -26,7 +26,7 @@ export const Cart: React.FC = () => {
     <div className="bg-[var(--color-bg-white)] min-h-screen py-24">
       <div className="max-w-5xl mx-auto px-6">
         <Reveal className="mb-16">
-          <h1 className="text-4xl font-headline uppercase tracking-widest">{t('cart:title', 'Your Cart')}</h1>
+          <h1 className="text-3xl sm:text-4xl font-headline uppercase tracking-widest">{t('cart:title', 'Your Cart')}</h1>
           <Divider className="mt-6" />
         </Reveal>
 

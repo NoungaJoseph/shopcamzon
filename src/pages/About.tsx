@@ -21,8 +21,8 @@ export const About: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <Reveal>
-            <h1 className="text-5xl md:text-6xl font-headline uppercase tracking-widest leading-tight whitespace-pre-line">
-              {t('about:title')}
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-headline uppercase tracking-widest leading-tight whitespace-pre-line">
+              {t('about:hero.title')}
             </h1>
             <Divider />
             {/* Illustrated fruit graphic placeholder */}
@@ -43,7 +43,7 @@ export const About: React.FC = () => {
       <div className="bg-white py-32 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal className="text-center mb-16 flex flex-col items-center">
-            <h2 className="text-4xl font-headline uppercase tracking-widest">{t('about:howItWorks.title')}</h2>
+            <h2 className="text-3xl sm:text-4xl font-headline uppercase tracking-widest">{t('about:howItWorks.title')}</h2>
             <Divider />
             <p className="text-[var(--color-text-muted)] mt-4 max-w-2xl">{t('about:howItWorks.intro')}</p>
           </Reveal>

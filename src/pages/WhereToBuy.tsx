@@ -10,7 +10,7 @@ export const WhereToBuy: React.FC = () => {
     <div className="bg-[var(--color-bg-cream)] min-h-screen py-24">
       <div className="max-w-5xl mx-auto px-6">
         <Reveal className="text-center flex flex-col items-center mb-16">
-          <h1 className="text-4xl font-headline uppercase">{t('nav.whereToBuy', 'Where To Buy')}</h1>
+          <h1 className="text-3xl sm:text-4xl font-headline uppercase">{t('nav.whereToBuy', 'Where To Buy')}</h1>
           <Divider className="my-6" />
           <p className="text-[var(--color-text-muted)] max-w-xl">{t('whereToBuy.subtitle', 'Find SHOPCAMZON in a store near you or order online.')}</p>
         </Reveal>

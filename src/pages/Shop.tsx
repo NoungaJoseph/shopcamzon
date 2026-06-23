@@ -25,7 +25,7 @@ export const Shop: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
 
         <Reveal className="text-center flex flex-col items-center mb-24">
-          <h1 className="text-4xl md:text-5xl font-headline uppercase tracking-widest">{t('shop:title')}</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-headline uppercase tracking-widest">{t('shop:title')}</h1>
           <Divider />
           <p className="text-[var(--color-text-muted)] mt-6">{t('shop:intro')}</p>
         </Reveal>
@@ -33,7 +33,7 @@ export const Shop: React.FC = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {products.map((p) => (
-            <Reveal key={p.id} className="flex flex-col bg-white border border-[var(--color-black)] group">
+            <Reveal key={p.id} className="flex flex-col bg-white border border-[var(--color-black)] group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
               <Link to={`/product/${p.id}`} className="block w-full aspect-[4/5] relative overflow-hidden bg-white">
                 <img src={`/${p.img}.jpg`} alt={t(`shop:products.${p.id}.name`)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </Link>

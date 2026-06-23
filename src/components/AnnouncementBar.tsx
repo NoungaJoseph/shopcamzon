@@ -19,7 +19,7 @@ export const AnnouncementBar: React.FC = () => {
   }, [messages.length]);
 
   return (
-    <div className="w-full bg-[var(--color-black)] text-[var(--color-white)] uppercase text-xs tracking-wide py-2 flex items-center justify-center overflow-hidden">
+    <div className="w-full bg-[var(--color-brand-red)] text-[var(--color-brand-white)] uppercase text-xs tracking-wide py-2 flex items-center justify-center overflow-hidden">
       <div className="relative w-full text-center h-4 flex items-center justify-center">
         {messages.map((msg, index) => (
           <span

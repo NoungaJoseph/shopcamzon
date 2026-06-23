@@ -48,7 +48,7 @@ export const ProductDetail: React.FC = () => {
         </Reveal>
 
         <Reveal className="flex flex-col">
-          <h1 className="text-4xl font-headline uppercase tracking-widest mb-4">{t(`shop:products.${id}.name`)}</h1>
+          <h1 className="text-3xl sm:text-4xl font-headline uppercase tracking-widest mb-4">{t(`shop:products.${id}.name`)}</h1>
           <span className="text-2xl font-body text-[var(--color-text-muted)] mb-8">{product.price.toLocaleString()} XAF</span>
 
           <Divider className="mb-8 w-1/4" />

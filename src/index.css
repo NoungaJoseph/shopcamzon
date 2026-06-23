@@ -1,21 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-cream: #F3EAE0;
-  --color-bg-white: #FFFFFF;
-  --color-bg-blush: #FBE3DE;
-  --color-text-primary: #1A1A1A;
+  /* Brand Colors */
+  --color-brand-red: #CC0000;
+  --color-brand-skyblue: #0EA5E9;
+  --color-brand-green: #198754;
+  --color-brand-silver: #F1F5F9;
+  --color-brand-black: #1A1A1A;
+  --color-brand-white: #FFFFFF;
+
+  /* Aliased Variables */
+  --color-bg-cream: var(--color-brand-silver);
+  --color-bg-white: var(--color-brand-white);
+  --color-bg-blush: var(--color-brand-skyblue);
+  --color-text-primary: var(--color-brand-black);
   --color-text-muted: #6B6259;
-  --color-accent: #E8A0A0;
-  --color-product-green: #A9C9A0;
-  --color-product-pink: #E89B96;
+  --color-accent: var(--color-brand-red);
+  --color-product-green: var(--color-brand-green);
+  --color-product-pink: var(--color-brand-red);
   --color-product-olive: #B7C26B;
   --color-product-blue: #A9B7C4;
-  --color-black: #000000;
-  --color-white: #FFFFFF;
+  --color-black: var(--color-brand-black);
+  --color-white: var(--color-brand-white);
   
   --font-headline: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
 }
 
 @layer base {
