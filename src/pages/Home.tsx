@@ -256,22 +256,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 5.3.5 AI Gesture Control */}
-      <section className="bg-[var(--color-bg-white)] py-24 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <Reveal className="text-center mb-16 flex flex-col items-center">
-            <h2 className="text-2xl sm:text-3xl font-headline uppercase tracking-widest">{t('home:gestureGuide.title', 'AI Gesture Control')}</h2>
-            <Divider />
-            <p className="text-[var(--color-text-muted)] mt-4 max-w-2xl font-serif italic">
-              {t('home:gestureGuide.subtitle', 'Take full control of your shooting experience with intuitive hand gestures.')}
-            </p>
-          </Reveal>
 
-          <Reveal className="max-w-4xl mx-auto flex justify-center">
-            <img src="/23.jpg" alt="AI Gesture Control Signs" className="w-full max-w-2xl rounded-xl shadow-lg border border-gray-100" />
-          </Reveal>
-        </div>
-      </section>
 
       {/* 5.4 Promo 2 */}
       <section className="bg-[var(--color-bg-blush)]">
